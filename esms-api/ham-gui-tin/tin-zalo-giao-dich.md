@@ -7,12 +7,12 @@
 
 
 
-* **Content Type:** <mark style="color:orange;">application/json</mark>
+* **Content Type:** <mark style="color:orange;">text/plain</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
 ```json
 curl --location 'https://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessage_V5_post_json/' \
---header 'Content-Type: application/json' \
+--header 'Content-Type: text/plain' \
 --data '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
