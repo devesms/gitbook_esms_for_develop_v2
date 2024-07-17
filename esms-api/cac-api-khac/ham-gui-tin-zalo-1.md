@@ -3,7 +3,7 @@
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark>[https://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V5\_post/](http://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V5\_post/)
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V5\_post/](http://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V5\_post/)
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
