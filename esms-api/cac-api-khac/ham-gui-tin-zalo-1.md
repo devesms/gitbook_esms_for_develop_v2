@@ -10,7 +10,7 @@
 
 {% code overflow="wrap" %}
 ```json
-curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/' \
+curl --location 'http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V5_post/' \
 --header 'Content-Type: application/json' \
 --data '{
     "ApiKey": "{{ApiKey}}",
