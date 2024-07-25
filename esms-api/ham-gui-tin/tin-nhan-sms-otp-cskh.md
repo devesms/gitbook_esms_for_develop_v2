@@ -14,7 +14,7 @@ curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendMu
 --header 'Content-Type: application/json' \
 --data-raw '{
    "ApiKey": "APIKEYCUABAN",
-   "Content": "Cam on quy khach da su dung dich vu cua chung toi. Chuc quy khach mot ngay tot lanh!",
+   "Content": "280391 la ma xac minh dang ky Baotrixemay cua ban",
    "Phone": "0901888484",
    "SecretKey": "SECRETKEYCUABAN",
    "Brandname": "Baotrixemay",
