@@ -20,7 +20,7 @@ curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendMu
    "Brandname": "Baotrixemay",
    "SmsType": "2",
    "IsUnicode": "0",
-   "campaignid": "Chiến dịch cảm ơn sau mua hàng tháng 7",
+   "campaignid": "Cảm ơn sau mua hàng tháng 7",
    "RequestId": "c82cd356-bf49-4113-9466-65a7f6359c96",
    "CallbackUrl": "https://esms.vn/webhook/"
 }'
