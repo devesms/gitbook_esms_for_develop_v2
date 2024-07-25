@@ -13,21 +13,25 @@
 curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/' \
 --header 'Content-Type: application/json' \
 --data '{
-    "ApiKey": "{{ApiKey}}",
-    "SecretKey": "{{SecretKey}}",
-    "OAID": "{{OAID}}",
-    "Phone": "{{Phone}}",
+    "ApiKey": "APIKEYCUABAN",
+    "SecretKey": "SECRETKEYCUABAN",
+    "OAID": "4097311281936189049",
+    "Phone": "0901888484",
     "TempData": {
-        "Tên biến 1": "{{Giá trị biến 1}}",
-        "Tên biến 2": "{{Giá trị biến 2}}",
-        "Tên biến 3": "{{Giá trị biến 3}}"
+        "customer_name": "Đinh Thái Hà",
+        "order_code": "HD00001",
+        "address": "140-142 Đường Số 1, KDC Vạn Phúc, Hiệp Bình Phước, Thủ Đức",
+        "phone": "0901888484",
+        "email": "dinhthaiha@vihatgroup.com",
+        "product_name": "Gói duy trì OA Zalo Premium 1 năm",
+        "quantity": "1",
+        "payment_amount": "4308000",
+        "delivery_date": "01/08/2024"
     },
-    "TempID":  "{{TempID}}",
-    "SendDate": "{{SendDate}}",
-    "campaignid":  "{{campaignid}}",
-    "Sandbox": "{{Sandbox}}",
-    "RequestId": "{{RequestId}}",
-    "CallbackUrl": "{{CallbackUrl}}"
+    "TempID":  "200607",
+    "campaignid":  "Xác nhận mua hàng",
+    "RequestId": "96accf59-0c41-4bc7-a5c4-4a466c2e41c2",
+    "CallbackUrl": "https://esms.vn/webhook/"
 }'
 ```
 {% endcode %}

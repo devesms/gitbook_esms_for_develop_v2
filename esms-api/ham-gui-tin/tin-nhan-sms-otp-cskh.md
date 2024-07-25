@@ -13,17 +13,16 @@
 curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-   "ApiKey": "{{ApiKey}}",
-   "Content": "{{Content}}",
-   "Phone": "{{Phone}}",
-   "SecretKey": "{{SecretKey}}",
-   "Brandname": "{{Brandname}}",
+   "ApiKey": "APIKEYCUABAN",
+   "Content": "Cam on quy khach da su dung dich vu cua chung toi. Chuc quy khach mot ngay tot lanh!",
+   "Phone": "0901888484",
+   "SecretKey": "SECRETKEYCUABAN",
+   "Brandname": "Baotrixemay",
    "SmsType": "2",
-   "IsUnicode": "{{IsUnicode}}",
-   "Sandbox": "{{Sandbox}}",
-   "campaignid": "{{campaignid}}",
-   "RequestId": "{{RequestId}}",
-   "CallbackUrl": "{{CallbackUrl}}"
+   "IsUnicode": "0",
+   "campaignid": "Chiến dịch cảm ơn sau mua hàng tháng 7",
+   "RequestId": "c82cd356-bf49-4113-9466-65a7f6359c96",
+   "CallbackUrl": "https://esms.vn/webhook/"
 }'
 ```
 
