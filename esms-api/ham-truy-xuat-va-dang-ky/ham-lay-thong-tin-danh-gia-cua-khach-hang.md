@@ -1,3 +1,7 @@
+---
+description: 'Lưu ý: Tối đa mỗi request giới hạn 50 đánh giá.'
+---
+
 # Hàm lấy thông tin đánh giá của khách hàng
 
 ## HTTP request
@@ -13,14 +17,14 @@
 curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/' \
 --header 'Content-Type: application/json' \
 --data '{
-    "ApiKey": "{{ApiKey}}",
-    "SecretKey": "{{SecretKey}}",
-    "OAID": "{{OAID}}",
-    "TemplateID": "{{TemplateID}}",
-    "FromTime": "{{FromTime}}",
-    "ToTime": "{{ToTime}}",
-    "offset":"{{Offset}}",
-    "limit":"{{Limit}}"
+    "ApiKey": "APIKEYCUABAN",
+    "SecretKey": "SECRETKEYCUABAN",
+    "OAID": "4097311281936189049",
+    "TemplateID": "266986",
+    "FromTime": "2024-07-28 00:00:00",
+    "ToTime": "2024-07-30 23:59:59",
+    "offset": "1",
+    "limit": "50"
 }'
 ```
 
