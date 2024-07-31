@@ -23,14 +23,14 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/' \
     "TemplateID": "266986",
     "FromTime": "2024-07-28 00:00:00",
     "ToTime": "2024-07-30 23:59:59",
-    "offset": "1",
-    "limit": "50"
+    "Offset": "1",
+    "Limit": "50"
 }'
 ```
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="156">Tham số</th><th width="122">Kiểu dữ liệu</th><th width="137" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey của tài khoản.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. <br>Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này.<br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>TemplateID</td><td>string</td><td>true</td><td>Template của Zalo OA mà khách hàng đăng kí với eSMS.</td></tr><tr><td>FromTime</td><td>string</td><td>true</td><td>Thời gian bắt đầu lấy đánh giá. Định dạng: yyyy-mm-dd hh:mm:ss .</td></tr><tr><td>ToTime</td><td>string</td><td>true</td><td>Thời gian kết thúc lấy đánh giá. Định dạng: yyyy-mm-dd hh:mm:ss .</td></tr><tr><td>offset</td><td>string</td><td>true</td><td>Lấy bắt đầu từ đánh giá thứ bao nhiêu.</td></tr><tr><td>limit</td><td>string</td><td>true</td><td>Số lượng đánh giá cần xem.</td></tr></tbody></table>
+<table><thead><tr><th width="156">Tham số</th><th width="122">Kiểu dữ liệu</th><th width="137" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey của tài khoản.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. <br>Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này.<br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>TemplateID</td><td>string</td><td>true</td><td>Template của Zalo OA mà khách hàng đăng kí với eSMS.</td></tr><tr><td>FromTime</td><td>string</td><td>true</td><td>Thời gian bắt đầu lấy đánh giá. Định dạng: yyyy-mm-dd hh:mm:ss .</td></tr><tr><td>ToTime</td><td>string</td><td>true</td><td>Thời gian kết thúc lấy đánh giá. Định dạng: yyyy-mm-dd hh:mm:ss .</td></tr><tr><td>Offset</td><td>string</td><td>true</td><td>Lấy bắt đầu từ đánh giá thứ bao nhiêu.</td></tr><tr><td>Limit</td><td>string</td><td>true</td><td>Số lượng đánh giá cần xem.</td></tr></tbody></table>
 
 ***
 
