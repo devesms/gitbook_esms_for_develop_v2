@@ -109,4 +109,4 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandn
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [_**Link code mẫu.**_](https://samplefordevelopers.esms.vn/#001e2636-af74-42d3-b25a-173b1dd1faed)
-* _<mark style="color:orange;">**Sử dụng hàm này để lấy thông tin chi tiết tin nhắn Quảng cáo:**</mark>_ [_**Link hàm**_](https://developers.esms.vn/esms-api/ham-truy-xuat-va-dang-ky/ham-kiem-tra-trang-thai-tin-nhan-theo-khoang-thoi-gian) .
+* _<mark style="color:orange;">**Để lấy kết quả gửi tin quảng cáo, vui lòng sử dụng api tại link:**</mark>_ [_**Link hàm**_](https://developers.esms.vn/esms-api/ham-truy-xuat-va-dang-ky/ham-kiem-tra-trang-thai-tin-nhan-theo-khoang-thoi-gian) .
