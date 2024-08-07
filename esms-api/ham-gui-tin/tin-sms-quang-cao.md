@@ -9,8 +9,7 @@ description: >-
 ## **HTTP request**&#x20;
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname\_json/](http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname\_json/)\
-
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname\_json/](http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname\_json/)
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
@@ -30,14 +29,13 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandn
     ],
     "SmsType": "1",
     "SendDate": "{{SendDate}}",
-    "CallbackUrl": "{{CallbackUrl}}",
     "Sandbox":"{{Sandbox}}"
 }'
 ```
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="170">Tham số</th><th width="141">Kiểu dữ liệu</th><th width="136" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey </td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey </td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr><tr><td>Content </td><td>string</td><td>true</td><td>Nội dung tin nhắn.</td></tr><tr><td>SmsType </td><td>string</td><td>true</td><td>Loại tin nhắn<br>1: Tin quảng cáo.</td></tr><tr><td>Brandname </td><td>string</td><td>true</td><td>Tên Brandname (tên công ty hay tổ chức khi gửi tin sẽ hiển thị trên tin nhắn đó). <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>Phones </td><td>string</td><td>true</td><td>Số điện thoại nhận tin nhắn.</td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi của tin. <br>Không truyền khi tin muốn tin nhắn gửi đi liền.<br>Định dạng: yyyy-mm-dd hh:MM:ss</td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL nhận kết quả gửi tin. <br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#eeaca8c5-ef65-4fed-ac2e-697d0360327b">ở đây</a>.<br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr><tr><td>Sandbox</td><td>string</td><td>false</td><td>1: Tin gửi ở môi trường test, dùng để kiểm tra kết nối và các thông số tích hợp, không về tin nhắn, không trừ tiền.<br>0: Tin gửi ở môi trường bình thường, có về tin nhắn.</td></tr></tbody></table>
+<table><thead><tr><th width="170">Tham số</th><th width="141">Kiểu dữ liệu</th><th width="136" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey </td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey </td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr><tr><td>Content </td><td>string</td><td>true</td><td>Nội dung tin nhắn.</td></tr><tr><td>SmsType </td><td>string</td><td>true</td><td>Loại tin nhắn<br>1: Tin quảng cáo.</td></tr><tr><td>Brandname </td><td>string</td><td>true</td><td>Tên Brandname (tên công ty hay tổ chức khi gửi tin sẽ hiển thị trên tin nhắn đó). <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>Phones </td><td>string</td><td>true</td><td>Số điện thoại nhận tin nhắn.</td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi của tin. <br>Không truyền khi tin muốn tin nhắn gửi đi liền.<br>Định dạng: yyyy-mm-dd hh:MM:ss</td></tr><tr><td>Sandbox</td><td>string</td><td>false</td><td>1: Tin gửi ở môi trường test, dùng để kiểm tra kết nối và các thông số tích hợp, không về tin nhắn, không trừ tiền.<br>0: Tin gửi ở môi trường bình thường, có về tin nhắn.</td></tr></tbody></table>
 
 ***
 
@@ -111,4 +109,4 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandn
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [_**Link code mẫu.**_](https://samplefordevelopers.esms.vn/#001e2636-af74-42d3-b25a-173b1dd1faed)
-
+* _<mark style="color:orange;">**Sử dụng hàm này để lấy thông tin chi tiết tin nhắn Quảng cáo:**</mark>_ [_**Link hàm**_](https://developers.esms.vn/esms-api/ham-truy-xuat-va-dang-ky/ham-kiem-tra-trang-thai-tin-nhan-theo-khoang-thoi-gian) .
