@@ -33,7 +33,7 @@
   * [Hàm lấy danh sách Zalo OA](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-danh-sach-zalo-oa.md)
   * [Hàm lấy danh sách template Zalo](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-danh-sach-template-zalo.md)
   * [Hàm tạm tính giá tin Zalo](esms-api/ham-truy-xuat-va-dang-ky/ham-tam-tinh-gia-tin-zalo.md)
-  * [Lấy Qouta tin Zalo theo OAID](esms-api/ham-truy-xuat-va-dang-ky/lay-qouta-tin-zalo-theo-oaid.md)
+  * [Lấy quota tin zalo theo OAID](esms-api/ham-truy-xuat-va-dang-ky/lay-qouta-tin-zalo-theo-oaid.md)
   * [Hàm lấy thông tin đánh giá của khách hàng](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-thong-tin-danh-gia-cua-khach-hang.md)
   * [Hàm kiểm tra chất lượng OA](esms-api/ham-truy-xuat-va-dang-ky/ham-kiem-tra-chat-luong-oa.md)
   * [Hàm lấy danh sách Zalo Followers](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-danh-sach-zalo-followers.md)
