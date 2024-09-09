@@ -17,7 +17,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/' 
     "ApiKey": "APIKEYCUABAN",
     "SecretKey": "SECRETKEYCUABAN",
     "OAID": "4097311281936189049",
-    "HashPhone": "jPRRA6p8AGYN12ZsB7QGlqLOCGrxPzaAjJ8qFrsYg8LZwjK0=",
+    "HashPhone": "jPRRA6p8AGYN12ZsB7QGlqLOCGrxPzafgdfghfghfeweqAjJ8qFrsYg8LZwjK0=",
     "TempData": {
         "customer_name": "Đinh Thái Hà",
         "order_code": "HD00001",
