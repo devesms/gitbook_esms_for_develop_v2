@@ -11,6 +11,7 @@
   * [Tin nhắn SMS OTP/CSKH](esms-api/ham-gui-tin/tin-nhan-sms-otp-cskh.md)
   * [Tin SMS quảng cáo](esms-api/ham-gui-tin/tin-sms-quang-cao.md)
   * [Tin nhắn Zalo](esms-api/ham-gui-tin/tin-nhan-zalo.md)
+  * [Tin nhắn Zalo sử dụng hash phone](esms-api/ham-gui-tin/tin-nhan-zalo-1.md)
   * [Tin Viber](esms-api/ham-gui-tin/tin-viber.md)
   * [Tin SMS cố định giá rẻ](esms-api/ham-gui-tin/tin-sms-co-dinh-gia-re.md)
   * [Tin mutichanel: Zalo => SMS OTP/CSKH](esms-api/ham-gui-tin/tin-mutichanel-zalo-greater-than-sms-otp-cskh.md)
