@@ -8,15 +8,17 @@
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
-<pre class="language-json" data-overflow="wrap"><code class="lang-json">curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/' \
+{% code overflow="wrap" %}
+```json
+curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/' \
 --header 'Content-Type: application/json' \
---data '{
+--header 'Cookie: ASP.NET_SessionId=wzlj2i5udpvik2ktprsusma5' \
+--data-raw '{
     "ApiKey": "APIKEYCUABAN",
     "SecretKey": "SECRETKEYCUABAN",
     "OAID": "4097311281936189049",
-<strong>    "HashPhone":
-</strong><strong>"ApwfITmMxKtH+LpkHRrocCjwj2EUdZJKwu1ASF7SolwJgvn+tllS+6iQ+IDmJZDgoh4fRUci978o7SnUAxxQOGu2FnGkppRz9zGOkMurKCjPRRA6p8AGYN12ZsB7QGlqLOCGrxPzaAjJ8qFrsYg8LZwjK0=",
-</strong>    "TempData": {
+    "HashPhone": "ApwfITmMxKtH+LpkHRrocCjwj2EUdZJKwu1ASF7SolwJgvn+tllS+6iQ+IDmJZDgoh4fRUci978o7SnUAxxQOGu2FnGkppRz9zGOkMurKCjPRRA6p8AGYN12ZsB7QGlqLOCGrxPzaAjJ8qFrsYg8LZwjK0=",
+    "TempData": {
         "customer_name": "Đinh Thái Hà",
         "order_code": "HD00001",
         "address": "140-142 Đường Số 1, KDC Vạn Phúc, Hiệp Bình Phước, Thủ Đức",
@@ -27,12 +29,13 @@
         "payment_amount": "4308000",
         "delivery_date": "01/08/2024"
     },
-    "TempID":  "200607",
-    "campaignid":  "Xác nhận mua hàng",
+    "TempID": "200607",
+    "campaignid": "Xác nhận mua hàng",
     "RequestId": "96accf59-0c41-4bc7-a5c4-4a466c2e41c2",
     "CallbackUrl": "https://esms.vn/webhook/"
 }'
-</code></pre>
+```
+{% endcode %}
 
 * **Cấu trúc body của request:**
 
