@@ -10,22 +10,14 @@
 
 {% code overflow="wrap" %}
 ```
-curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname' \
---header 'Content-Type: text/plain' \
---data '<RQST>
-<APIKEY>{{APIKEY}}</APIKEY>
-<SECRETKEY>{{SECRETKEY}}</SECRETKEY>
-<CONTENT>{{CONTENT}}</CONTENT>
-<SMSTYPE>1</SMSTYPE>
-<BRANDNAME>{{BRANDNAME}}</BRANDNAME>
-<CONTACTS>
-<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>
-<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>
-<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>
-<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>
-<CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>
-</CONTACTS>
-</RQST>'
+curl --location 'http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post/' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'Apikey={{Apikey}}' \
+--data-urlencode 'SecretKey={{SecretKey}}' \
+--data-urlencode 'Phone={{Phone}}' \
+--data-urlencode 'Content={{Content}}' \
+--data-urlencode 'Smstype={{Smstype}}' \
+--data-urlencode 'OAID={{OAID}}'
 ```
 {% endcode %}
 
