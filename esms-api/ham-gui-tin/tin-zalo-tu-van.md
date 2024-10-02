@@ -5,7 +5,7 @@
 \
 <mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage\_V5\_post\_json/](http://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage\_V5\_post\_json/)
 
-* **Content Type:** <mark style="color:orange;">application/json</mark>
+* **Content Type:** <mark style="color:orange;">text/plain</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
 ```json
