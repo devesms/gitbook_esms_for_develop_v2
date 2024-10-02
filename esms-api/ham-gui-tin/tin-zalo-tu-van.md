@@ -10,7 +10,7 @@
 
 ```json
 curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/' \
---header 'Content-Type: application/json' \
+--header 'Content-Type: text/plain' \
 --data '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
