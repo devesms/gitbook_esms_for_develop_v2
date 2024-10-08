@@ -10,9 +10,8 @@
 
 {% code overflow="wrap" %}
 ```json
-curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/' \
+curl --location 'http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/hash_phone/' \
 --header 'Content-Type: application/json' \
---header 'Cookie: ASP.NET_SessionId=wzlj2i5udpvik2ktprsusma5' \
 --data-raw '{
     "ApiKey": "APIKEYCUABAN",
     "SecretKey": "SECRETKEYCUABAN",
