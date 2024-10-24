@@ -94,4 +94,4 @@ curl --location 'http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/has
 <table><thead><tr><th width="195">Thuộc tính</th><th width="156">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>SMSID</td><td>string</td><td>ID của tin nhắn mới được tạo ra trên hệ thống eSMS. Dùng ID này để query lấy trạng thái tin nhắn.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi).</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
-* _<mark style="color:yellow;">**Lấy code mẫu của các ngôn ngữ ở link**</mark>_<mark style="color:yellow;">:</mark> [**Link code mẫu**](tin-nhan-zalo-su-dung-hash-phone.md) **.**
+* _<mark style="color:yellow;">**Lấy code mẫu của các ngôn ngữ ở link**</mark>_<mark style="color:yellow;">:</mark> [**Link code mẫu** ](https://samplefordevelopers.esms.vn/#11cf40ab-2970-4d03-9cc6-374177bfc103)**.**
