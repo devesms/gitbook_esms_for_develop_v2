@@ -38,6 +38,7 @@
   * [Hàm lấy thông tin đánh giá của khách hàng](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-thong-tin-danh-gia-cua-khach-hang.md)
   * [Hàm kiểm tra chất lượng OA](esms-api/ham-truy-xuat-va-dang-ky/ham-kiem-tra-chat-luong-oa.md)
   * [Hàm lấy danh sách Zalo Followers](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-danh-sach-zalo-followers.md)
+  * [Hàm lấy danh sách UID có tương tác theo khoảng thời gian](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-danh-sach-zalo-followers-1.md)
   * [Hàm lấy thông tin callback tin nhắn Zalo](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-thong-tin-callback-tin-nhan-zalo.md)
   * [Hàm lấy thông tin chi tiết template Zalo](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-thong-tin-chi-tiet-template-zalo.md)
   * [Hàm đăng ký mua gói OA](esms-api/ham-truy-xuat-va-dang-ky/ham-dang-ky-mua-goi-oa.md)
