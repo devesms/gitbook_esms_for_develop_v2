@@ -14,7 +14,7 @@ curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendMu
 --header 'Content-Type: application/json' \
 --data-raw '{
    "ApiKey": "APIKEYCUABAN",
-   "Content": "280391 la ma xac minh dang ky Baotrixemay cua ban",
+   "Content": "CODE la ma xac minh dang ky Baotrixemay cua ban",
    "Phone": "0901888484",
    "SecretKey": "SECRETKEYCUABAN",
    "Brandname": "Baotrixemay",
@@ -23,6 +23,10 @@ curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendMu
    "campaignid": "Cảm ơn sau mua hàng tháng 7",
    "RequestId": "c82cd356-bf49-4113-9466-65a7f6359c96",
    "CallbackUrl": "https://esms.vn/webhook/"
+// Brandname và Content trên dùng để thử nghiệm. Chỉ gửi được với nội dung này, thay đổi sẽ sai mẫu và tin nhắn không được gửi.
+// CODE có thể tùy chỉnh, tối đa 20 ký tự gồm số hoặc chữ. Ví dụ: 280391Ab la ma xac minh dang ky Baotrixemay cua ban
+// Mỗi số điện thoại và Content giống nhau chỉ được phép gửi một tin trong 5 phút. Hãy thay đổi số điện thoại hoặc Content để thử nghiệm các tin nhắn liên tiếp.
+// Cần dùng Brandname/Content khác, hãy liên hệ nhân viên kinh doanh tại https://esms.vn/ (thông tin ở bên phải màn hình sau khi đăng nhập).
 }'
 ```
 
