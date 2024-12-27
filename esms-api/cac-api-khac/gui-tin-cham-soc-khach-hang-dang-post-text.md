@@ -9,7 +9,7 @@ description: >-
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname](http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname)
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMultipleMessage\_V4](https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4)
 
 * **Content Type:** <mark style="color:orange;">application/text/plain</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
