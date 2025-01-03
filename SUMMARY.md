@@ -13,7 +13,7 @@
   * [Tin nhắn Zalo](esms-api/ham-gui-tin/tin-nhan-zalo.md)
   * [Tin nhắn Zalo sử dụng hash phone](esms-api/ham-gui-tin/tin-nhan-zalo-su-dung-hash-phone.md)
   * [Tin Viber](esms-api/ham-gui-tin/tin-viber.md)
-  * [Tin SMS cố định giá rẻ](esms-api/ham-gui-tin/tin-sms-co-dinh-gia-re.md)
+  * [Tin Voice OTP](esms-api/ham-gui-tin/tin-sms-co-dinh-gia-re.md)
   * [Tin mutichanel: Zalo => SMS OTP/CSKH](esms-api/ham-gui-tin/tin-mutichanel-zalo-greater-than-sms-otp-cskh.md)
   * [Tin Zalo mỗi khách hàng một nội dung](esms-api/ham-gui-tin/tin-zalo-moi-khach-hang-mot-noi-dung.md)
   * [Tin Zalo tư vấn](esms-api/ham-gui-tin/tin-zalo-tu-van.md)

@@ -1,9 +1,13 @@
-# Tin SMS cố định giá rẻ
+---
+description: Cần liên hệ CSKH để có tỉ lệ nhận tin nhắn cao.
+---
+
+# Tin Voice OTP
 
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMultipleMessage\_V4\_post\_json/](http://rest.esms.vn/MainService.svc/json/SendMultipleMessage\_V4\_post\_json/)\
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMultipleMessage\_V4\_post\_json/](http://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4_post_json/)\
 
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
