@@ -1,4 +1,8 @@
-# Tin nhắn SMS OTP/CSKH
+---
+icon: comment-sms
+---
+
+# Tin nhắn SMS OTP/CSKH (Khuyên Dùng)
 
 
 
