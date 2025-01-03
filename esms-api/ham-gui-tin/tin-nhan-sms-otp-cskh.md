@@ -1,10 +1,14 @@
 ---
 icon: comment-sms
+description: 'LƯU Ý QUAN TRỌNG:'
 ---
 
 # Tin nhắn SMS OTP/CSKH (Khuyên Dùng)
 
-
+* **Liên hệ nhân viên chăm sóc khách hàng nếu muốn gửi tên thương hiêu và nội dung riêng của bạn.**
+* **Nội dung (Content) tin nhắn test phải đúng như request mẫu, đổi nội dung tin sẽ thất bại.**
+* **Thay đổi giá trị Brandname và Content ở request mẫu có thể tin nhắn không gửi được nếu chưa được đăng ký với nhà mạng.**
+* Đổi giá trị CODE ở nội dung để test nhiều tin, tránh bị nhà mạng chặn tin spam.
 
 ## HTTP request
 
@@ -28,7 +32,7 @@ curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendMu
    "RequestId": "c82cd356-bf49-4113-9466-65a7f6359c96",
    "CallbackUrl": "https://esms.vn/webhook/"
 // Brandname và Content trên dùng để thử nghiệm. Chỉ gửi được với nội dung này, thay đổi sẽ sai mẫu và tin nhắn không được gửi.
-// CODE có thể tùy chỉnh, tối đa 20 ký tự gồm số hoặc chữ. Ví dụ: 280391Ab la ma xac minh dang ky Baotrixemay cua ban
+// CODE có thể tùy chỉnh, tối đa 8 ký tự gồm số hoặc chữ. Ví dụ: 2803 la ma xac minh dang ky Baotrixemay cua ban
 // Mỗi số điện thoại và Content giống nhau chỉ được phép gửi một tin trong 5 phút. Hãy thay đổi số điện thoại hoặc Content để thử nghiệm các tin nhắn liên tiếp.
 // Cần dùng Brandname/Content khác, hãy liên hệ nhân viên kinh doanh tại https://esms.vn/ (thông tin ở bên phải màn hình sau khi đăng nhập).
 }'
