@@ -1,10 +1,10 @@
 ---
 description: >-
   Giải pháp Multi-Channel Messaging API cho phép bạn gửi tin nhắn đến khách hàng
-  đi qua các kênh giao tiếp khác nhau như Zalo, SMS theo các thứ tự ưu tiên.
+  bằng tin ZNS và tự động gửi tin SMS nếu tin ZNS gửi thất bại.
 ---
 
-# Tin mutichanel: Zalo => SMS OTP/CSKH
+# Gửi đa kênh: ZNS => SMS
 
 ## HTTP request
 
