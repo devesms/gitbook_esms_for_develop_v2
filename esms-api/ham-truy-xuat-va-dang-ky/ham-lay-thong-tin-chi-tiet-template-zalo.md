@@ -24,26 +24,55 @@ curl --location -g 'https://rest.esms.vn/MainService.svc/json/GetZnsTemplateInfo
 ```
 {
     "Data": {
-        "ApplyTemplateQuota": false,
+        "ListButtons": [
+            {
+                "Content": "https://oa.zalo.me/4097311281936189049",
+                "Title": "Quan tâm OA",
+                "Type": 2
+            }
+        ],
         "ListParams": [
             {
                 "AcceptNull": false,
-                "MaxLength": 10,
+                "MaxLength": 100,
                 "MinLength": 0,
-                "Name": "otp",
+                "Name": "customer_name",
+                "Require": true,
+                "Type": "STRING"
+            },
+            {
+                "AcceptNull": false,
+                "MaxLength": 100,
+                "MinLength": 0,
+                "Name": "product_name",
+                "Require": true,
+                "Type": "STRING"
+            },
+            {
+                "AcceptNull": false,
+                "MaxLength": 30,
+                "MinLength": 0,
+                "Name": "order_code",
+                "Require": true,
+                "Type": "STRING"
+            },
+            {
+                "AcceptNull": false,
+                "MaxLength": 30,
+                "MinLength": 0,
+                "Name": "date",
                 "Require": true,
                 "Type": "STRING"
             }
         ],
-        "PreviewUrl": "https://zns.oa.zalo.me/znspreview/SZk01CLsjXTYpn_B4agO0g==",
+        "PreviewUrl": "https://account.zalo.cloud/znspreview/NqFkYJ14yilzdlAXteG_rQ==",
+        "Reason": "Template đã được duyệt",
         "Status": "ENABLE",
-        "TemplateDailyQuota": null,
-        "TemplateId": 205644,
-        "TemplateName": "Xác nhận đăng ký dịch vụ",
-        "TemplateQuality": "UNDEFINED",
-        "TemplateRemainingQuota": null,
-        "TemplateTag": "OTP",
-        "Timeout": 15000
+        "TemplateId": 267247,
+        "TemplateName": "Đánh giá dịch vụ - text",
+        "TemplateQuality": "null",
+        "TemplateTag": "TRANSACTION",
+        "Timeout": 7200000
     },
     "Error": 0,
     "Message": "Success"
@@ -54,15 +83,17 @@ curl --location -g 'https://rest.esms.vn/MainService.svc/json/GetZnsTemplateInfo
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body của Response:**
+* **Cấu trúc thuộc tính data.ListButtons**
 
-<table><thead><tr><th width="217">Thuộc tính</th><th width="166">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>ApplyTemplateQuota</td><td>string</td><td><p>Trường thông tin cho biết template có áp dụng hạn mức Daily Quota hay không.</p><p>Chú thích: Hạn mức Daily Quota chỉ áp dụng cho một số template đặc biệt mang tính thử nghiệm và đã trực tiếp được đăng ký với Zalo. Các template bình thường sẽ không bị ảnh hưởng bởi giới hạn này.</p></td></tr><tr><td>PreviewUrl</td><td>string</td><td>Đường dẫn đến bản xem trước của template.</td></tr><tr><td>Status</td><td>string</td><td>Trạng thái template.</td></tr><tr><td>TemplateDailyQuota</td><td>string</td><td><p>Số tin ZNS thuộc template này OA được gửi trong ngày.</p><p>Lưu ý: Trường thông tin này chỉ được trả về khi applyTemplateQuota = true.</p></td></tr><tr><td>TemplateId</td><td>string</td><td>ID của template.</td></tr><tr><td>TemplateName</td><td>string</td><td>Tên của template.</td></tr><tr><td>TemplateQuality</td><td>string</td><td><p></p><p>Chất lượng gửi tin hiện tại của template.</p><p>Các giá trị trả về:</p><ul><li><strong>HIGH</strong></li><li><strong>MEDIUM</strong></li><li><strong>LOW</strong></li><li><strong>UNDEFINED</strong></li></ul></td></tr><tr><td>TemplateRemainingQuota</td><td>string</td><td><p>Số tin ZNS thuộc template này OA được gửi trong ngày còn lại.</p><p>Lưu ý: Trường thông tin này chỉ được trả về khi applyTemplateQuota = true.</p></td></tr><tr><td>TemplateTag</td><td>string</td><td><p></p><p>Loại nội dung của template. Các giá trị trả về:</p><ul><li><strong>OTP</strong> – OTP</li><li><strong>IN_TRANSACTION</strong> – Xác nhận/Cập nhật giao dịch</li><li><strong>POST_TRANSACTION</strong> – Hỗ trợ dịch vụ liên quan sau giao dịch</li><li><strong>ACCOUNT_UPDATE</strong> – Cập nhật thông tin tài khoản</li><li><strong>GENERAL_UPDATE</strong> – Thay đổi thông tin dịch vụ</li><li><strong>FOLLOW_UP</strong> – Thông báo ưu đãi đến khách hàng cũ</li></ul></td></tr><tr><td>Timeout</td><td>string</td><td>Thời gian timeout của template.</td></tr><tr><td>AcceptNull</td><td>string</td><td>Thông tin cho biết thuộc tính có thể nhận giá trị rỗng hay không.</td></tr><tr><td>MaxLength</td><td>string</td><td>Số kí tự tối đa được truyền vào thuộc tính.</td></tr><tr><td>MinLength</td><td>string</td><td>Số kí tự tối thiểu được truyền vào thuộc tính.</td></tr><tr><td>Name</td><td>string</td><td>Tên thuộc tính.</td></tr><tr><td>Require</td><td>string</td><td>Tính bắt buộc của thuộc tính.</td></tr><tr><td>Type</td><td>string</td><td>Định dạng validate của thuộc tính.</td></tr></tbody></table>
+<table><thead><tr><th width="161">Thuộc tính</th><th width="166">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>Content</td><td>string</td><td>Đường dẫn liên kết/số điện thoại.</td></tr><tr><td>Title</td><td>string</td><td>Nội dung Button.</td></tr><tr><td>Type</td><td>integer</td><td><p>Danh sách button:</p><p>1: Đến trang của doanh nghiệp<br>2: Gọi điện <br>3: Đến trang thông tin OA <br>4: Đến ứng dụng Zalo Mini App của doanh nghiệp <br>5: Đến trang tải ứng dụng <br>6: Đến trang phân phối sản phẩm <br>7: Đến trang web/Zalo Mini App khác <br>8: Đến ứng dụng khác</p></td></tr></tbody></table>
 
-{% hint style="info" %}
-* Hiện tại số lần request là 1s cho 1 lần request
-* Số ReferenceId tối đa cho 1 lần request là 100
-* Thời gian request là vào lúc 01:00 đến 02:00 AM mỗi ngày
-{% endhint %}
+* **Cấu trúc thuộc tính data.listParams**
+
+<table><thead><tr><th width="162">Thuộc tính</th><th width="167">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>Name</td><td>string</td><td>Tên thuộc tính.</td></tr><tr><td>Require</td><td>boolean</td><td>Tính bắt buộc của thuộc tính.</td></tr><tr><td>Type</td><td>string</td><td>Định dạng validate của thuộc tính.</td></tr><tr><td>MaxLength</td><td>int</td><td>Số kí tự tối đa được truyền vào thuộc tính.</td></tr><tr><td>MinLength</td><td>int</td><td>Số kí tự tối thiểu được truyền vào thuộc tính.</td></tr><tr><td>AcceptNull</td><td>boolean</td><td>Thông tin cho biết thuộc tính có thể nhận giá trị rỗng hay không.</td></tr></tbody></table>
+
+* **Cấu trúc thuộc tính data**
+
+<table><thead><tr><th width="171">Thuộc tính</th><th width="165">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>PreviewUrl</td><td>string</td><td>Đường dẫn đến bản xem trước của template.</td></tr><tr><td>Reason</td><td>string</td><td>Lý do template có trạng thái hiện tại:<br><br>- DISABLE/REJECT: Chi tiết lý do khi template ở trạng thái Disable hoặc Reject.<br>- ENABLE: Template đã được duyệt.<br>- DELETE: Template đã bị xóa.<br>- PENDING_REVIEW: Template đang được kiểm duyệt.<br></td></tr><tr><td>Status</td><td>string</td><td>Trạng thái template. Các trạng thái bao gồm: <br><br>- ENABLE: Trạng thái template được kích hoạt, có thể sử dụng để gửi thông báo ZNS.<br>- PENDING_REVIEW: Trạng thái template chờ kiểm duyệt. <br>- DELETE: Trạng thái template bị xóa. <br>- REJECT: Trạng thái template bị từ chối. <br>- DISABLE: Trạng thái template bị hủy kích hoạt.</td></tr><tr><td>TemplateId</td><td>string</td><td>ID của template.</td></tr><tr><td>TemplateName</td><td>string</td><td>Tên của template.</td></tr><tr><td>TemplateQuality</td><td>string</td><td>Trả về giá trị null cho trường thông tin này.</td></tr><tr><td>TemplateTag</td><td>string</td><td>Loại nội dung của template. Các giá trị trả về: <br><br>- TRANSACTION: Giao dịch <br>- CUSTOMER_CARE: Chăm sóc khách hàng <br>- PROMOTION: Hậu mãi</td></tr><tr><td>Timeout</td><td>long</td><td>Thời gian timeout của template.</td></tr><tr><td>ListButtons</td><td>object array</td><td>Danh sách các buttons/CTAs của template <br>Chỉ áp dụng với 2 loại CTA: primary và secondary. <br>Không hiển thị các CTA từ image module và response button.</td></tr><tr><td>ListParams</td><td>object array</td><td>Danh sách các thuộc tính của template.</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#43e884e9-36a4-4272-94bd-c388551e7c60)**.**
