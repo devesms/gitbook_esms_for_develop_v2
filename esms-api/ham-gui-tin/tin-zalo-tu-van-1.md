@@ -18,7 +18,7 @@ curl --location 'http://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessag
  "OAID":"{{OAID}}",
  "User_id":"{{User_id}}",
  "Content":"{{content}}",
- "Template_type":"media",
+ "Template_type":"{{Template_type}}",
  "Url": "{{url}}",
  "CallbackUrl": "{{url}}"
  }'
