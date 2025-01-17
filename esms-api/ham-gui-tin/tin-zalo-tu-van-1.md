@@ -9,19 +9,34 @@
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
 ```json
-curl --location 'http://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessage_V4_post_json/' \
---header 'Content-Type: application/json' \
+curl --location 'http://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/' \
+--header 'Content-Type: text/plain' \
+--header 'Cookie: ASP.NET_SessionId=asfgp2dj1kt4kbg1yzuo35ky; ASP.NET_SessionId=5xcbl12ska5q5wocug3chmjz' \
 --data '{
- "ApiKey":"{{ApiKey}}",
- "SecretKey":"{{SecretKey}}",
-  "Sandbox":0,
- "OAID":"{{OAID}}",
- "User_id":"{{User_id}}",
- "Content":"{{Content}}",
- "Template_type":"{{Template_type}}",
- "Url": "{{Url}}",
- "CallbackUrl": "{{CallbackUrl}}"
- }'
+    "ApiKey": "{{ApiKey}}",
+    "SecretKey": "{{SecretKey}}",
+    "OAID": "{{OAID}}",
+    "Payload": {
+        "recipient": {
+            "user_id": "{{user_id}}"
+        },
+        "message": {
+            "text": "{{text}}",
+            "attachment": {
+                "type": "template",
+                "payload": {
+                    "template_type": "media",
+                    "elements": [
+                        {
+                            "media_type": "image",
+                            "url": "{{url}}"
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}'
 ```
 
 
