@@ -18,6 +18,7 @@
   * [Tin Zalo mỗi khách hàng một nội dung](esms-api/ham-gui-tin/tin-zalo-moi-khach-hang-mot-noi-dung.md)
   * [Tin Zalo tư vấn dạng văn bản](esms-api/ham-gui-tin/tin-zalo-tu-van.md)
   * [Tin Zalo tư vấn đính kèm ảnh](esms-api/ham-gui-tin/tin-zalo-tu-van-1.md)
+  * [Tin Zalo tư vấn dạng button](esms-api/ham-gui-tin/tin-zalo-tu-van-2.md)
   * [Tin Zalo giao dịch](esms-api/ham-gui-tin/tin-zalo-giao-dich.md)
   * [Tin Zalo dạng yêu cầu thông tin người dùng](esms-api/ham-gui-tin/tin-zalo-dang-yeu-cau-thong-tin-nguoi-dung.md)
   * [Tin Zalo hành trình](esms-api/ham-gui-tin/tin-zalo-hanh-trinh.md)
