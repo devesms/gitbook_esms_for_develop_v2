@@ -17,10 +17,10 @@ curl --location 'http://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessag
   "Sandbox":0,
  "OAID":"{{OAID}}",
  "User_id":"{{User_id}}",
- "Content":"{{content}}",
+ "Content":"{{Content}}",
  "Template_type":"{{Template_type}}",
- "Url": "{{url}}",
- "CallbackUrl": "{{url}}"
+ "Url": "{{Url}}",
+ "CallbackUrl": "{{CallbackUrl}}"
  }'
 ```
 
