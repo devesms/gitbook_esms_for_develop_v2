@@ -1,4 +1,4 @@
-# Tin Zalo tư vấn dạng button
+# Tin Zalo Tư vấn dạng button
 
 ## HTTP request
 
@@ -16,7 +16,7 @@ curl --location --request POST 'http://rest.esms.vn/MainService.svc/json/SendZal
 --data-raw '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
-    "OAID": "{{OAID}{",
+    "OAID": "{{OAID}}",
     "CallbackUrl": "{{CallbackUrl}}",
     "Payload": {
         "recipient": {
