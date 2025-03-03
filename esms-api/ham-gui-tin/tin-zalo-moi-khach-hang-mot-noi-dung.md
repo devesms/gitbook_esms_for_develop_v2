@@ -1,3 +1,10 @@
+---
+description: >-
+  API eSMS gửi tin nhắn Zalo hàng loạt với nội dung tùy chỉnh cho từng khách
+  hàng. Hỗ trợ mẫu tin, tham số động, hẹn giờ gửi và callback. Tích hợp dễ dàng
+  qua HTTP POST JSON.
+---
+
 # Tin Zalo mỗi khách hàng một nội dung
 
 ## HTTP request
@@ -39,7 +46,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="155">Tham số</th><th width="124">Kiểu dữ liệu</th><th width="141" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey </td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey </td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr><tr><td>TempID </td><td>string</td><td>true</td><td>Template của Zalo OA mà khách hàng đăng kí với eSMS.</td></tr><tr><td>Data: Phone</td><td>string</td><td>true</td><td>Số điện thoại người nhận.</td></tr><tr><td>Date: Params </td><td>string</td><td>true</td><td><p></p><p>Giá trị cần truyền cho các biến trong Template.<br> <strong>*Lưu ý:</strong></p><ol><li>Các tham số truyền vào phải đúng thứ tự như template bạn đăng ký.</li><li>Nếu tham số trùng nhau chỉ cần truyền vào một tham số.</li></ol></td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi của tin. <br>Không truyền khi tin muốn tin nhắn gửi đi liền.<br>Định dạng: yyyy-mm-dd hh:MM:ss</td></tr><tr><td>OAID </td><td>string</td><td>true</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL nhận kết quả gửi tin. <br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#eeaca8c5-ef65-4fed-ac2e-697d0360327b">ở đây</a>. <br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr></tbody></table>
+<table><thead><tr><th width="155">Tham số</th><th width="124">Kiểu dữ liệu</th><th width="141" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey </td><td>string</td><td>true</td><td>Chuỗi ký tự đại diện cho khóa API của tài khoản eSMS.</td></tr><tr><td>SecretKey </td><td>string</td><td>true</td><td>Chuỗi ký tự bí mật của tài khoản eSMS.</td></tr><tr><td>OAID </td><td>string</td><td>true</td><td>ID của Zalo Official Account (OA) của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy OAID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>TempID </td><td>string</td><td>true</td><td>ID của mẫu tin nhắn Zalo OA mà doanh nghiệp đã đăng ký với eSMS.</td></tr><tr><td>Data: Phone</td><td>string</td><td>true</td><td>Số điện thoại người nhận.</td></tr><tr><td>Date: Params </td><td>string</td><td>true</td><td><p></p><p>Danh sách các giá trị cần truyền cho các biến trong mẫu tin nhắn.<br> <strong>*Lưu ý:</strong></p><ol><li>Các tham số truyền vào phải đúng thứ tự như template bạn đăng ký.</li><li>Nếu tham số trùng nhau chỉ cần truyền vào một tham số.</li></ol></td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi tin nhắn.<br>Nếu không truyền tham số này, tin nhắn sẽ được gửi ngay lập tức.<br>Định dạng: <code>yyyy-mm-dd hh:MM:ss</code></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL nhận kết quả gửi tin. <br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#eeaca8c5-ef65-4fed-ac2e-697d0360327b">ở đây</a>. <br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr></tbody></table>
 
 ***
 
