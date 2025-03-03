@@ -3,28 +3,37 @@
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/Send\_zns\_bulk\_v4\_post\_json/](http://rest.esms.vn/MainService.svc/json/Send\_zns\_bulk\_v4\_post\_json/)
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/Send\_zns\_bulk\_v4\_post\_json/](http://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/)
 
 
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
-```json
+```bash
 curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/' \
 --header 'Content-Type: application/json' \
 --data '{
-"ApiKey": "{{ApiKey}}",
-"SecretKey": "{{SecretKey}}",
-"TempID": "{{TempID}}",
-"Data": [
-{"Phone":"{{Phone}}","Params":["{{value1}}","{{value2}}","{{value3}}"]},
-{"Phone":"{{Phone}}","Params":["{{value1}}","{{value2}}","{{value3}}"]},
-{"Phone":"{{Phone}}","Params":["{{value1}}","{{value2}}","{{value3}}"]}
-],
-"SendDate":"{{SendDate}}",
-"OAID":"{{OAID}}",
-"CallbackUrl":"{{CallbackUrl}}"
+    "ApiKey": "{{ApiKey}}",
+    "SecretKey": "{{SecretKey}}",
+    "OAID": "{{OAID}}",
+    "TempID": "{{TempID}}",
+    "SendDate": "{{SendDate}}",
+    "CallbackUrl": "{{CallbackUrl}}",
+    "Data": [
+        {
+            "Phone": "{{Phone}}",
+            "Params": [ "{{value1}}", "{{value2}}", "{{value3}}" ]
+        },
+        {
+            "Phone": "{{Phone}}",
+            "Params": [ "{{value1}}", "{{value2}}", "{{value3}}" ]
+        },
+        {
+            "Phone": "{{Phone}}",
+            "Params": [ "{{value1}}", "{{value2}}", "{{value3}}" ]
+        }
+    ]
 }'
 ```
 
@@ -53,7 +62,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post
         {
             "CodeResult": "100",
             "Phone": "{Phone}",
-            "SMSID": "b83ff06e-8989-4b0d-818e-795b96699e86264"
+            "SMSID": "b83ff06e-8989-4b0d-818e-795b96699e86261"
         }
     ]
 }
