@@ -8,6 +8,12 @@ Các trường hợp thường gặp nhất khi gửi Zalo thất bại: số đ
 
 CHECKCODE: Kiểm tra xem mã đã tạo có hợp lệ hay không, giúp xác minh tính đúng đắn và đảm bảo an toàn khi sử dụng.
 
+* Lưu ý:&#x20;
+
+\+ Quý khách cần đăng ký Zalo OA, template Zalo, brandname CSKH và template brandname CSKH trước khi sử dụng.
+
+\+ Khi có nhu cầu sử dụng API này, quý khách vui lòng gửi các thông tin sau đây cho bộ phận kinh doanh để cấu hình gửi: OAID, templateID zalo, brandname CSKH, template brandname CSKH.
+
 * [x] **GENCODE: tạo và gửi mã xác thực tự động**
 
 \
@@ -22,11 +28,11 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCod
 --header 'Content-Type: application/json' \
 --data '{
  "ApiKey": "{{ApiKey}}",
- "Phone": "{{Phone}}",
- "TimeAlive": "{{TimeAlive}}",
+ "Phone": "0901888484",
+ "TimeAlive": "2",
  "SecretKey": "{{SecretKey}}",
- "MultiChannelTempId": "{{MultiChannelTempId}}",
- "TypeId":"{{TypeId}}"
+ "MultiChannelTempId": "22575",
+ "TypeId":"2"
 }'
 ```
 {% endcode %}
@@ -55,9 +61,9 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCod
 {% tab title="101" %}
 ```json
 {
-    "CodeResult": "100",
+    "CodeResult": "101",
     "CountRegenerate": 0,
-    "SMSID": "ebe101db-87cd-4285-b97b-6a7a90455ded30"
+    "ErrorMessage": "Authorize Failed"
 }
 ```
 
