@@ -2,7 +2,7 @@
 
 Để đáp ứng nhu cầu của người dùng về việc tự động tạo mã xác thực và gửi qua tin nhắn thương hiệu (SMS Brandname), chúng tôi đã thiết kế hai API: GENCODE để tạo mã và CHECKCODE để kiểm tra mã, giúp tối ưu hóa quy trình xác thực.
 
-GENCODE: Tạo mã xác thực, mã OTP, mã tham chiếu hoặc mã giao dịch theo yêu cầu của hệ thống.
+GENCODE: Tạo mã xác thực/mã OTP tự động, sau đó gửi tin nhắn đến máy khách hàng qua tin nhắn SMS.
 
 CHECKCODE: Kiểm tra xem mã đã tạo có hợp lệ hay không, giúp xác minh tính đúng đắn và đảm bảo an toàn khi sử dụng.
 
