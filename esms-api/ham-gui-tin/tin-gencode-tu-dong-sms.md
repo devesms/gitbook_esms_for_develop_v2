@@ -67,7 +67,7 @@ curl --location --globoff 'https://rest.esms.vn/MainService.svc/json//SendMessag
 
 {% code overflow="wrap" %}
 ```
-curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Phone={{{Phone}}&Code={{Code}}'
+curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Phone=0901888484&Code=1NTTJ6'
 ```
 {% endcode %}
 
