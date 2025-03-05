@@ -87,7 +87,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCod
 
 {% code overflow="wrap" %}
 ```
-curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Phone={{{Phone}}&Code={{Code}}'
+curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/CheckCodeGen_V4_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&Phone=0901888484&Code=1NTTJ6'
 ```
 {% endcode %}
 
@@ -120,6 +120,18 @@ curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/CheckCodeGe
 ```
 
 **Sai thông tin ApiKey/SecretKey.**
+{% endtab %}
+
+{% tab title="117" %}
+```
+{
+    "CodeResult": "117",
+    "CountRegenerate": 0,
+    "ErrorMessage": "0901888484, Content: 1NTTJ6 Code Invalid"
+}
+```
+
+**Mã code đã được sử dụng hoặc hết thời gian hiệu lực.**
 {% endtab %}
 {% endtabs %}
 
