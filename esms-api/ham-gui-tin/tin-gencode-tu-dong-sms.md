@@ -6,18 +6,18 @@ GENCODE: Tạo mã xác thực/mã OTP tự động, sau đó gửi tin nhắn �
 
 CHECKCODE: Kiểm tra xem mã đã tạo có hợp lệ hay không, giúp xác minh tính đúng đắn và đảm bảo an toàn khi sử dụng.
 
+* Lưu ý: khách hàng cần đăng ký brandname và template trước khi sử dụng API này.
 
+- [x] **GENCODE: tạo và gửi mã xác thực tự động**
 
-* [x] **GENCODE: tạo và gửi mã xác thực tự động**
-
-<mark style="color:green;">**`GET`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode\_V4\_get?Phone={Phone}\&ApiKey={ApiKey}\&SecretKey={SecretKey}\&TimeAlive={TimeAlive}\&NumCharOfCode={NumCharOfCode}\&Brandname={Brandname}\&Type=2\&message={Content}](http://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V4_get?Phone={Phone}\&ApiKey={ApiKey}\&SecretKey={SecretKey}\&TimeAlive={TimeAlive}\&NumCharOfCode={NumCharOfCode}\&Brandname={Brandname}\&Type=2\&message={Content})\
+<mark style="color:green;">**`GET`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode\_V4\_get?Phone=\{{Phone\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&TimeAlive=\{{TimeAlive\}}\&NumCharOfCode=\{{NumCharOfCode\}}\&Brandname=\{{Brandname\}}\&Type=2\&message=\{{Content\}}](https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V4_get?Phone=\{{Phone\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&TimeAlive=\{{TimeAlive\}}\&NumCharOfCode=\{{NumCharOfCode\}}\&Brandname=\{{Brandname\}}\&Type=2\&message=\{{Content\}})\
 
 
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
 {% code overflow="wrap" %}
 ```json
-curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V4_get?Phone={{Phone}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&TimeAlive={{TimeAlive}}&NumCharOfCode={{NumCharOfCode}}&Brandname={{Brandname}}&Type=2&message={{Content}}&IsNumber={{IsNumber}}'
+curl --location --globoff 'https://rest.esms.vn/MainService.svc/json//SendMessageAutoGenCode_V4_get?Phone=0901888484&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&TimeAlive=2&Brandname=Baotrixemay&Type=2&message={OTP} la ma xac minh dang ky Baotrixemay cua ban'
 ```
 {% endcode %}
 
@@ -100,6 +100,18 @@ curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/CheckCodeGe
 ```
 
 **Sai thông tin ApiKey/SecretKey.**
+{% endtab %}
+
+{% tab title="117" %}
+```
+{
+    "CodeResult": "117",
+    "CountRegenerate": 0,
+    "ErrorMessage": "0901888484, Content: 1NTTJ6 Code Invalid"
+}
+```
+
+**Mã code đã được sử dụng hoặc hết thời gian hiệu lực.**
 {% endtab %}
 {% endtabs %}
 
