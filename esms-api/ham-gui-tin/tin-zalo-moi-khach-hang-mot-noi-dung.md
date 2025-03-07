@@ -19,25 +19,31 @@ description: >-
 
 ```bash
 curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/' \
+--header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
+    "campaignid": "{{campaignid}}",
     "OAID": "{{OAID}}",
     "TempID": "{{TempID}}",
+    "Sandbox": "{{Sandbox}}",
     "SendDate": "{{SendDate}}",
     "CallbackUrl": "{{CallbackUrl}}",
     "Data": [
         {
             "Phone": "{{Phone}}",
+            "RequestId": "{{RequestId}}",
             "Params": [ "{{value1}}", "{{value2}}", "{{value3}}" ]
         },
         {
             "Phone": "{{Phone}}",
+            "RequestId": "{{RequestId}}",
             "Params": [ "{{value1}}", "{{value2}}", "{{value3}}" ]
         },
         {
             "Phone": "{{Phone}}",
+            "RequestId": "{{RequestId}}",
             "Params": [ "{{value1}}", "{{value2}}", "{{value3}}" ]
         }
     ]
@@ -46,7 +52,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="155">Tham số</th><th width="124">Kiểu dữ liệu</th><th width="141" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey </td><td>string</td><td>true</td><td>Chuỗi ký tự đại diện cho khóa API của tài khoản eSMS.</td></tr><tr><td>SecretKey </td><td>string</td><td>true</td><td>Chuỗi ký tự bí mật của tài khoản eSMS.</td></tr><tr><td>OAID </td><td>string</td><td>true</td><td>ID của Zalo Official Account (OA) của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy OAID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>TempID </td><td>string</td><td>true</td><td>ID của mẫu tin nhắn Zalo OA mà doanh nghiệp đã đăng ký với eSMS.</td></tr><tr><td>Data: Phone</td><td>string</td><td>true</td><td>Số điện thoại người nhận.</td></tr><tr><td>Date: Params </td><td>string</td><td>true</td><td><p></p><p>Danh sách các giá trị cần truyền cho các biến trong mẫu tin nhắn.<br> <strong>*Lưu ý:</strong></p><ol><li>Các tham số truyền vào phải đúng thứ tự như template bạn đăng ký.</li><li>Nếu tham số trùng nhau chỉ cần truyền vào một tham số.</li></ol></td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi tin nhắn.<br>Nếu không truyền tham số này, tin nhắn sẽ được gửi ngay lập tức.<br>Định dạng: <code>yyyy-mm-dd hh:MM:ss</code></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL nhận kết quả gửi tin. <br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#eeaca8c5-ef65-4fed-ac2e-697d0360327b">ở đây</a>. <br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr></tbody></table>
+<table><thead><tr><th width="155">Tham số</th><th width="124">Kiểu dữ liệu</th><th width="141" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey </td><td>string</td><td>true</td><td>Chuỗi ký tự đại diện cho khóa API của tài khoản eSMS.</td></tr><tr><td>SecretKey </td><td>string</td><td>true</td><td>Chuỗi ký tự bí mật của tài khoản eSMS.</td></tr><tr><td>campaignid</td><td>string</td><td>false</td><td>Tên chiến dịch gửi tin, tối đa 254 ký tự.<br>Đây là mã chiến dịch mà bạn sẽ phân biệt được các chiến dịch gửi tin.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>ID của Zalo Official Account (OA) của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy OAID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>TempID</td><td>string</td><td>true</td><td>ID của mẫu tin nhắn Zalo OA mà doanh nghiệp đã đăng ký với eSMS.</td></tr><tr><td>Sandbox</td><td>string</td><td>false</td><td>Chế độ Sandbox để kiểm tra API mà không gửi tin nhắn thực tế.<br><strong>Mặc định:</strong> <code>Sandbox = 0</code></td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi tin nhắn.<br>Nếu không truyền tham số này, tin nhắn sẽ được gửi ngay lập tức.<br><strong>Định dạng:</strong> <code>yyyy-mm-dd hh:MM:ss</code></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL mà hệ thống sẽ gọi lại để trả kết quả gửi tin nhắn.<br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#eeaca8c5-ef65-4fed-ac2e-697d0360327b">ở đây</a>. <br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr><tr><td>Data</td><td>Array</td><td>true</td><td>Mảng đối tượng chứa thông tin về từng tin nhắn bạn muốn gửi.<br>Mảng có kích thước tối đa 500 phần tử.</td></tr><tr><td>Data: Phone</td><td>string</td><td>true</td><td>Số điện thoại người nhận.</td></tr><tr><td>Data: RequestId</td><td>string</td><td>false</td><td>ID Tin nhắn của đối tác, dùng để kiểm tra ID này đã được hệ thống esms tiếp nhận trước đó hay chưa.<br>Ví dụ: <code>RequestId=123456</code>.</td></tr><tr><td>Date: Params </td><td>string</td><td>true</td><td><p></p><p>Danh sách các giá trị cần truyền cho các biến trong mẫu tin nhắn.<br> <strong>*Lưu ý:</strong></p><ol><li>Các tham số truyền vào phải đúng thứ tự như template bạn đăng ký.</li><li>Nếu tham số trùng nhau chỉ cần truyền vào một tham số.</li></ol></td></tr></tbody></table>
 
 ***
 
@@ -59,6 +65,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post
 {
     "CodeResult": "100",
     "Message": "Sucess",
+    "TotalFail": 1,
     "TotalSuccess": 2,
     "detail": [
         {
@@ -70,6 +77,11 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post
             "CodeResult": "100",
             "Phone": "{Phone}",
             "SMSID": "b83ff06e-8989-4b0d-818e-795b96699e86261"
+        },
+        {
+            "CodeResult": "108",
+            "Phone": "{Phone}",
+            "ErrorMessage": "The phone number 097469188 is not valid."
         }
     ]
 }
@@ -105,7 +117,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post
 
 * **Cấu trúc body của response:**
 
-<table><thead><tr><th width="209">Thuốc tính</th><th width="146">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>Message</td><td>string</td><td>Trạng thái request.</td></tr><tr><td>TotalSuccess</td><td>string</td><td>Tổng số điện thoại request gửi tin thành công.</td></tr><tr><td>detail : CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>detail : Phone</td><td>string</td><td>Số điện thoại tương ứng với ID tin nhắn do esms trả về.</td></tr><tr><td>detail : SMSID</td><td>string</td><td>ID tin nhắn do esms trả về.</td></tr></tbody></table>
+<table><thead><tr><th width="209">Thuốc tính</th><th width="146">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>Message</td><td>string</td><td>Mô tả chi tiết về phản hồi.</td></tr><tr><td>TotalFail</td><td>string</td><td>Tổng số điện thoại request gửi tin thất bại.</td></tr><tr><td>TotalSuccess</td><td>string</td><td>Tổng số điện thoại request gửi tin thành công.</td></tr><tr><td>detail : CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>detail : Phone</td><td>string</td><td>Số điện thoại tương ứng với ID tin nhắn do esms trả về.</td></tr><tr><td>detail : SMSID</td><td>string</td><td>ID tin nhắn do esms trả về.</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#1f75d02b-c622-4de4-aedc-dd9d4c2b16ea)**.**&#x20;
