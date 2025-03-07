@@ -43,6 +43,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/MultiChannelMessage/'
             "SmsType": "{{SmsType}}",
             "Brandname": "{{Brandname}}",
             "CallbackUrl": "{{CallbackUrl}}",
+            "RequestId":"{{RequestId}}",
             "Sandbox":"{{Sandbox}}"
         }
     ]
