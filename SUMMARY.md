@@ -10,7 +10,7 @@
 * [Hàm gửi tin](esms-api/ham-gui-tin/README.md)
   * [Tin nhắn SMS OTP/CSKH (Khuyên Dùng)](esms-api/ham-gui-tin/tin-nhan-sms-otp-cskh.md)
   * [Tin nhắn Zalo](esms-api/ham-gui-tin/tin-nhan-zalo.md)
-  * [Gửi đa kênh: ZNS => SMS](esms-api/ham-gui-tin/tin-mutichanel-zalo-greater-than-sms-otp-cskh.md)
+  * [Tin nhắn đa kênh: Zalo => SMS](esms-api/ham-gui-tin/tin-mutichanel-zalo-greater-than-sms-otp-cskh.md)
   * [Tin nhắn Zalo sử dụng hash phone](esms-api/ham-gui-tin/tin-nhan-zalo-su-dung-hash-phone.md)
   * [Tin Zalo mỗi khách hàng một nội dung](esms-api/ham-gui-tin/tin-zalo-moi-khach-hang-mot-noi-dung.md)
   * [Tin Zalo Tư vấn dạng văn bản](esms-api/ham-gui-tin/tin-zalo-tu-van-dang-van-ban.md)
