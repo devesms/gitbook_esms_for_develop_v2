@@ -20,7 +20,7 @@
   * [Tin Zalo Tư vấn dạng yêu cầu thông tin người dùng](esms-api/ham-gui-tin/tin-zalo-dang-yeu-cau-thong-tin-nguoi-dung.md)
   * [Tin Zalo hành trình](esms-api/ham-gui-tin/tin-zalo-hanh-trinh.md)
   * [Tạo và gửi mã xác thực tự động bằng tin nhắn SMS](esms-api/ham-gui-tin/tin-gencode-tu-dong-sms.md)
-  * [Tạo và gửi mã xác thực tự động đa kênh: ZNS => SMS](esms-api/ham-gui-tin/tin-gencode-tu-dong-multichanel-zalo-greater-than-sms.md)
+  * [Tạo và gửi mã xác thực tự động đa kênh: Zalo => SMS](esms-api/ham-gui-tin/tin-gencode-tu-dong-multichanel-zalo-greater-than-sms.md)
   * [Tin Viber](esms-api/ham-gui-tin/tin-viber.md)
   * [Tin SMS quảng cáo](esms-api/ham-gui-tin/tin-sms-quang-cao.md)
   * [Tin Voice OTP](esms-api/ham-gui-tin/tin-sms-co-dinh-gia-re.md)
