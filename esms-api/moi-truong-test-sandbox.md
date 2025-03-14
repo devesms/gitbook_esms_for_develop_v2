@@ -1,6 +1,6 @@
 # Môi trường test ( Sandbox)
 
-* Để gửi tin ở môi trường thử nghiệm, eSMS đã cung cấp cho khách hàng môi trường test tin. Khách hàng truyền thêm trường Sandbox vào body gửi. Tin nhắn sẽ không được lưu ở hệ thống eSMS, không tính phí và không về máy khách hàng.
+* Để gửi tin ở môi trường thử nghiệm, eSMS đã cung cấp cho khách hàng môi trường test tin. Khách hàng truyền thêm trường Sandbox vào body gửi. Tin nhắn sẽ **không được lưu ở hệ thống eSMS, không tính phí và không về máy khách hàng.**
 * Truyền Sandbox = 1 cho các api có hỗ trợ môi trường Sandbox.
 
 
