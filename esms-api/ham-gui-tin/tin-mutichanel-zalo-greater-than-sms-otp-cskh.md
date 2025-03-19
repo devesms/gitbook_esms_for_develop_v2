@@ -4,7 +4,7 @@ description: >-
   bằng tin ZNS và tự động gửi tin SMS nếu tin ZNS gửi thất bại.
 ---
 
-# Gửi đa kênh: ZNS => SMS
+# Tin nhắn đa kênh: Zalo => SMS OTP/CSKH
 
 ## HTTP request
 
@@ -22,29 +22,31 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/MultiChannelMessage/'
 --data '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
-    "Phone": "{{Phone}}",
+    "Phone": "0901888484",
     "Channels": [
         "zalo",
         "sms"
     ],
     "Data": [
         {
-            "TempID": "{{TempID}}",
-            "Params": ["{{param1}}","{{param2}}","{{param3}}"],
-            "OAID": "{{OAID}}",
-            "campaignid": "{{campaignid}}",
-            "CallbackUrl": "{{CallbackUrl}}",
-            "RequestId":"{{RequestId}}",
-            "Sandbox":"{{Sandbox}}"
+            "TempID": "205644",
+            "Params": [
+                "686868"
+            ],
+            "OAID": "4097311281936189049",
+            "campaignid": "Gửi OTP",
+            "CallbackUrl": "https://esms.vn/webhook/",
+            "RequestId": "c82cd356-bf49-4113-9466-65a7f6359c97",
+            "Sandbox":"0"
         },
         {
-            "Content": "{{Content}}",
-            "IsUnicode": "{{IsUnicode}}",
-            "SmsType": "{{SmsType}}",
-            "Brandname": "{{Brandname}}",
-            "CallbackUrl": "{{CallbackUrl}}",
-            "RequestId":"{{RequestId}}",
-            "Sandbox":"{{Sandbox}}"
+            "Content": "686868 la ma xac minh dang ky Baotrixemay cua ban",
+            "IsUnicode": "0",
+            "SmsType": "2",
+            "Brandname": "Baotrixemay",
+            "CallbackUrl": "https://esms.vn/webhook/",
+            "RequestId": "c82cd356-bf49-4113-9466-65a7f6359c98",
+            "Sandbox":"0"
         }
     ]
 }'
