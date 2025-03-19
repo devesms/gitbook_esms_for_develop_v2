@@ -33,7 +33,8 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT
     ],
     "SmsType": "23"
 }'
-// Truyền \r\n để gửi nội dung xuống dòng.
+// Truyền \r\n để gửi nội dung xuống dòng
+// Gửi tin đến nhiều số điện thoại khác nhau sẽ truyền theo cú pháp: "0901888484","0918238965"
 ```
 {% endcode %}
 
