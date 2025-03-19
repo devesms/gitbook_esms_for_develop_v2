@@ -18,16 +18,10 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V
 --header 'Content-Type: application/json' \
 --data '{
    "ApiKey": "{{ApiKey}}",
-   "Content": "{{Content}}",
-   "Phone": "{{Phone}}",
    "SecretKey": "{{SecretKey}}",
-   "SmsType": "8",
-   "IsUnicode": "{{IsUnicode}}",
-   "Sandbox": "{{Sandbox}}",
-   "campaignid": "{{campaignid}}",
-   "RequestId": "{{RequestId}}",
-   "CallbackUrl": "{{CallbackUrl}}",
-   "SendDate":"{{SendDate}}"
+   "Content": "686868",
+   "Phone": "0901888484",
+   "SmsType": "8"
 }'
 ```
 
