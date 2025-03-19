@@ -29,8 +29,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessa
                     "elements": [
                         {
                             "media_type": "image",
-                            "url": "
-https://minio.esms.vn/blogimg/agent-1/BlogImg/full_3f8df17c-2d15-4ecb-b9fd-3bcc9cb0d97b.png"
+                            "url": "https://minio.esms.vn/blogimg/agent-1/BlogImg/full_3f8df17c-2d15-4ecb-b9fd-3bcc9cb0d97b.png"
                         }
                     ]
                 }
