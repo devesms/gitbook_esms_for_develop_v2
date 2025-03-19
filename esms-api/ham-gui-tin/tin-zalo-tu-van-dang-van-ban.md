@@ -1,4 +1,4 @@
-# Tin Zalo tư vấn dạng văn bản
+# Tin Zalo Tư vấn dạng văn bản
 
 ## HTTP request
 
@@ -9,17 +9,15 @@
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
 ```json
-curl --location 'http://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessage_V4_post_json/' \
+curl --location 'https://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessage_V4_post_json/' \
 --header 'Content-Type: application/json' \
---header 'Cookie: ASP.NET_SessionId=5xcbl12ska5q5wocug3chmjz; ASP.NET_SessionId=wauhgrxpkq40wj00w52orug3' \
 --data '{
  "ApiKey":"{{ApiKey}}",
  "SecretKey":"{{SecretKey}}",
  "OAID":"{{OAID}}",
  "User_id":"{{User_id}}",
  "Content":"{{Content}}",
-  "CallbackUrl": "{{CallbackUrl}}"
-
+ "CallbackUrl": "{{CallbackUrl}}"
 }'
 ```
 
