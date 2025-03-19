@@ -19,32 +19,30 @@ description: >-
 
 ```bash
 curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post_json/' \
---header 'Accept: application/json' \
 --header 'Content-Type: application/json' \
 --data '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
-    "campaignid": "{{campaignid}}",
-    "OAID": "{{OAID}}",
-    "TempID": "{{TempID}}",
-    "Sandbox": "{{Sandbox}}",
-    "SendDate": "{{SendDate}}",
-    "CallbackUrl": "{{CallbackUrl}}",
+    "campaignid": "Chiến dịch 1",
+    "OAID": "4097311281936189049",
+    "TempID": "267247",
+    "Sandbox": "0",
+    "CallbackUrl": "https://esms.vn/webhook/",
     "Data": [
         {
-            "Phone": "{{Phone}}",
-            "RequestId": "{{RequestId}}",
-            "Params": [ "{{value1}}", "{{value2}}", "{{value3}}" ]
+            "Phone": "0901888484",
+            "RequestId": "96accf59-0c41-4bc7-a5c1",
+            "Params": [ "Chị A", "Gội đầu", "KH001", "19/03/2025" ]
         },
         {
-            "Phone": "{{Phone}}",
-            "RequestId": "{{RequestId}}",
-            "Params": [ "{{value1}}", "{{value2}}", "{{value3}}" ]
+            "Phone": "0918238965",
+            "RequestId": "96accf59-0c41-4bc7-a5c2",
+            "Params": [ "Chị B", "Uốn", "KH002", "19/03/2025" ]
         },
         {
-            "Phone": "{{Phone}}",
-            "RequestId": "{{RequestId}}",
-            "Params": [ "{{value1}}", "{{value2}}", "{{value3}}" ]
+            "Phone": "0765418062",
+            "RequestId": "96accf59-0c41-4bc7-a5c3",
+            "Params": [ "Chị C", "Nhuộm", "KH003", "19/03/2025" ]
         }
     ]
 }'
@@ -52,7 +50,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="155">Tham số</th><th width="124">Kiểu dữ liệu</th><th width="141" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey </td><td>string</td><td>true</td><td>Chuỗi ký tự đại diện cho khóa API của tài khoản eSMS.</td></tr><tr><td>SecretKey </td><td>string</td><td>true</td><td>Chuỗi ký tự bí mật của tài khoản eSMS.</td></tr><tr><td>campaignid</td><td>string</td><td>false</td><td>Tên chiến dịch gửi tin, tối đa 254 ký tự.<br>Đây là mã chiến dịch mà bạn sẽ phân biệt được các chiến dịch gửi tin.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>ID của Zalo Official Account (OA) của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy OAID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>TempID</td><td>string</td><td>true</td><td>ID của mẫu tin nhắn Zalo OA mà doanh nghiệp đã đăng ký với eSMS.</td></tr><tr><td>Sandbox</td><td>string</td><td>false</td><td>Chế độ Sandbox để kiểm tra API mà không gửi tin nhắn thực tế.<br><strong>Mặc định:</strong> <code>Sandbox = 0</code></td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi tin nhắn.<br>Nếu không truyền tham số này, tin nhắn sẽ được gửi ngay lập tức.<br><strong>Định dạng:</strong> <code>yyyy-mm-dd hh:MM:ss</code></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL mà hệ thống sẽ gọi lại để trả kết quả gửi tin nhắn.<br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#eeaca8c5-ef65-4fed-ac2e-697d0360327b">ở đây</a>. <br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr><tr><td>Data</td><td>Array</td><td>true</td><td>Mảng đối tượng chứa thông tin về từng tin nhắn bạn muốn gửi.<br><strong>Chú ý: Mảng có kích thước tối đa 500 phần tử.</strong></td></tr><tr><td>Data: Phone</td><td>string</td><td>true</td><td>Số điện thoại người nhận.</td></tr><tr><td>Data: RequestId</td><td>string</td><td>false</td><td>ID Tin nhắn của đối tác, dùng để kiểm tra ID này đã được hệ thống esms tiếp nhận trước đó hay chưa.<br>Ví dụ: <code>RequestId=123456</code>.</td></tr><tr><td>Date: Params </td><td>string</td><td>true</td><td><p></p><p>Danh sách các giá trị cần truyền cho các biến trong mẫu tin nhắn.<br> <strong>*Lưu ý:</strong></p><ol><li>Các tham số truyền vào phải đúng thứ tự như template bạn đăng ký.</li><li>Nếu tham số trùng nhau chỉ cần truyền vào một tham số.</li></ol></td></tr></tbody></table>
+<table><thead><tr><th width="155">Tham số</th><th width="124">Kiểu dữ liệu</th><th width="141" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey </td><td>string</td><td>true</td><td>Chuỗi ký tự đại diện cho khóa API của tài khoản eSMS.</td></tr><tr><td>SecretKey </td><td>string</td><td>true</td><td>Chuỗi ký tự bí mật của tài khoản eSMS.</td></tr><tr><td>campaignid</td><td>string</td><td>false</td><td>Tên chiến dịch gửi tin, tối đa 254 ký tự.<br>Đây là mã chiến dịch mà bạn sẽ phân biệt được các chiến dịch gửi tin.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>ID của Zalo Official Account (OA) của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy OAID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>TempID</td><td>string</td><td>true</td><td>ID của mẫu tin nhắn Zalo OA mà doanh nghiệp đã đăng ký với eSMS.</td></tr><tr><td>Sandbox</td><td>string</td><td>false</td><td>Chế độ Sandbox để kiểm tra API mà không gửi tin nhắn thực tế.<br><strong>Mặc định:</strong> <code>Sandbox = 0</code></td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi tin nhắn.<br>Nếu không truyền tham số này, tin nhắn sẽ được gửi ngay lập tức.<br><strong>Định dạng:</strong> <code>yyyy-mm-dd hh:MM:ss</code></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL mà hệ thống sẽ gọi lại để trả kết quả gửi tin nhắn.<br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#eeaca8c5-ef65-4fed-ac2e-697d0360327b">ở đây</a>. <br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr><tr><td>Data</td><td>Array</td><td>true</td><td>Mảng đối tượng chứa thông tin về từng tin nhắn bạn muốn gửi.<br><strong>Chú ý: Mảng có kích thước tối đa 500 phần tử.</strong></td></tr><tr><td>Data: Phone</td><td>string</td><td>true</td><td>Số điện thoại người nhận.</td></tr><tr><td>Data: RequestId</td><td>string</td><td>false</td><td>ID Tin nhắn của đối tác, dùng để kiểm tra ID này đã được hệ thống esms tiếp nhận trước đó hay chưa.<br>Ví dụ: <code>RequestId=123456</code>.</td></tr><tr><td>Data: Params </td><td>string</td><td>true</td><td><p></p><p>Danh sách các giá trị cần truyền cho các biến trong mẫu tin nhắn.<br> <strong>*Lưu ý:</strong></p><ol><li>Các tham số truyền vào phải đúng thứ tự như template bạn đăng ký.</li><li>Nếu tham số trùng nhau chỉ cần truyền vào một tham số.</li></ol></td></tr></tbody></table>
 
 ***
 
