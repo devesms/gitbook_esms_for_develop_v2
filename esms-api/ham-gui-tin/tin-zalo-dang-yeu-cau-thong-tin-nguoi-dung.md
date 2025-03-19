@@ -1,9 +1,9 @@
-# Tin Zalo dạng yêu cầu thông tin người dùng
+# Tin Zalo Tư vấn dạng yêu cầu thông tin người dùng
 
 ## HTTP request
 
 \
-<mark style="color:yellow;">**POST**</mark> [https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage\_V5\_post\_json/](http://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage\_V5\_post\_json/)
+<mark style="color:yellow;">**POST**</mark> [https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage\_V5\_post\_json/](http://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/)
 
 
 
@@ -17,8 +17,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessa
 "ApiKey": "{{ApiKey}}",
 "SecretKey": "{{SecretKey}}",
 "OAID": "{{OAID}}",
-"CallbackUrl":"{{CallbackURL}}",
-    "Payload": {
+"Payload": {
         "recipient": {
             "user_id": "{{UserID}}"
         },
@@ -29,9 +28,9 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessa
                     "template_type": "request_user_info",
                     "elements": [
                         {
-                            "title": "{{Title}}",
-                            "subtitle": "{{Subtitle}}",
-                            "image_url": "{{ImageURL}}"
+                            "title": "OA Chatbot",
+                            "subtitle": "Đang yêu cầu thông tin từ bạn",
+                            "image_url": "https://minio.esms.vn/blogimg/agent-1/BlogImg/full_cccc34d4-3a46-4644-8613-1b226203c5d5.png"
                         }
                     ]
                 }
@@ -45,7 +44,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessa
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="135">Tham số</th><th width="120">Kiểu dữ liệu</th><th width="152" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>User_id</td><td>string</td><td>true</td><td>Userid cần gửi đến, đây là userid của zalo.</td></tr><tr><td>Title</td><td>string</td><td>true</td><td>Tiêu đề hiển thị của template.<br>Lưu ý: Hỗ trợ tối đa 100 ký tự.</td></tr><tr><td>Subtitle</td><td>string</td><td>true</td><td>Tiêu đề phụ của template.<br>Lưu ý: Hỗ trợ tối đa 500 ký tự.</td></tr><tr><td>ImageUrl</td><td>string</td><td>true</td><td>Link hình ảnh, chấp nhận link đuôi PNG và JPG.</td></tr><tr><td>CallbackUrl</td><td></td><td>false</td><td>URL nhận kết quả gửi tin. <br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#aabcd08e-e84a-4e9a-9598-c894af957d5b">ở đây</a>. <br>Xem chi tiết <a href="https://developers-v2.esms.vn/esms-api/callback-url">ở đây</a>.</td></tr></tbody></table>
+<table><thead><tr><th width="135">Tham số</th><th width="120">Kiểu dữ liệu</th><th width="152" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>User_id</td><td>string</td><td>true</td><td>Userid cần gửi đến, đây là userid của zalo.</td></tr><tr><td>Title</td><td>string</td><td>true</td><td>Tiêu đề hiển thị của template.<br>Lưu ý: Hỗ trợ tối đa 100 ký tự.</td></tr><tr><td>Subtitle</td><td>string</td><td>true</td><td>Tiêu đề phụ của template.<br>Lưu ý: Hỗ trợ tối đa 500 ký tự.</td></tr><tr><td>ImageUrl</td><td>string</td><td>true</td><td>Link hình ảnh, chấp nhận link đuôi PNG và JPG.</td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL nhận kết quả gửi tin. <br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#aabcd08e-e84a-4e9a-9598-c894af957d5b">ở đây</a>. <br>Xem chi tiết <a href="https://developers-v2.esms.vn/esms-api/callback-url">ở đây</a>.</td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi của tin.<br>Không truyền khi tin muốn tin nhắn gửi đi liền.<br>Định dạng: yyyy-mm-dd hh:MM:ss</td></tr></tbody></table>
 
 ***
 
