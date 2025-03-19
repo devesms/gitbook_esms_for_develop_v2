@@ -16,7 +16,7 @@ curl --location 'https://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessa
  "SecretKey":"{{SecretKey}}",
  "OAID":"{{OAID}}",
  "User_id":"{{User_id}}",
- "Content":"{{Content}}",
+ "Content":"Tin Zalo Tư vấn dạng văn bản",
  "CallbackUrl": "{{CallbackUrl}}"
 }'
 ```
