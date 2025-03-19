@@ -10,54 +10,52 @@
 
 ```json
 
-curl --location --request POST 'http://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/' \
+curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessage_V5_post_json/' \
 --header 'Content-Type: text/plain' \
---header 'Cookie: ASP.NET_SessionId=asfgp2dj1kt4kbg1yzuo35ky' \
 --data-raw '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
     "OAID": "{{OAID}}",
-    "CallbackUrl": "{{CallbackUrl}}",
     "Payload": {
         "recipient": {
             "user_id": "{{user_id}}"
         },
         "message": {
-            "text": "{{text}}",
+            "text": "Chào mừng bạn đến với hệ thống eSMS. Đây là tin nhắn zalo dạng button.",
             "attachment": {
                 "type": "template",
                 "payload": {
                     "buttons": [
                         {
-                            "title": "{{title}}",
+                            "title": "Link url",
                             "payload": {
-                                "url": "{{url}}"
+                                "url": "https://developers.esms.vn/esms-api/ham-gui-tin/tin-zalo-tu-van-dang-button"
                             },
                             "type": "oa.open.url"
                         },
                         {
-                            "title": "{{title}}",
+                            "title": "QUERY SHOW",
                             "type": "oa.query.show",
-                            "payload": "{{payload}}"
+                            "payload": "#callback_data"
                         },
                         {
-                            "title": "{{title}}",
+                            "title": "QUERY HIDE",
                             "type": "oa.query.hide",
-                            "payload": "{{payload}}"
+                            "payload": "#callback_data"
                         },
                         {
-                            "title": "{{title}}",
+                            "title": "OPEN SMS",
                             "type": "oa.open.sms",
                             "payload": {
-                                "content": "{{content}}",
-                                "phone_code": "{{phone_code}}"
+                                "content": "Cảm ơn quý khách đã sử dụng dịch vụ của chúng tôi. Chúc quý khách một ngày mới tốt lành!",
+                                "phone_code": "0901888484"
                             }
                         },
                         {
-                            "title": "{{title}}",
+                            "title": "OPEN PHONE",
                             "type": "oa.open.phone",
                             "payload": {
-                                "phone_code": "{{phone_code}}"
+                                "phone_code": "0901888484"
                             }
                         }
                     ]
@@ -72,7 +70,7 @@ curl --location --request POST 'http://rest.esms.vn/MainService.svc/json/SendZal
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="135">Tham số</th><th width="109">Kiểu dữ liệu </th><th width="136" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey eSMS cung cấp.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey eSMS cung cấp.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>User_id</td><td>string</td><td>true</td><td>Userid cần gửi đến, đây là userid của zalo.</td></tr><tr><td>text</td><td>string</td><td>false</td><td>Tiêu đề của ảnh<br> Giới hạn tối đa là 2.000 ký tự</td></tr><tr><td>attachment</td><td>string</td><td>true</td><td><p>Tittle: mô tả của action.</p><p>Default_action<br>- Type oa.open.url: Url sẽ được mở trong ứng dụng Zalo khi người quan tâm bấm vào action<br>- Type oa.open.sms: Khi người quan tâm click vào action, cửa sổ sms trên điện thoại của người quan tâm sẽ được mở với 2 thông tin sẵn có là phone code và nội dung tin nhắn trong data.<br>- Type oa.query.hide: Payload là một chuỗi ký tự ví dụ “#eSMS”. Khi người quan tâm bấm vào action, hệ thống sẽ gửi một tin nhắn có nội dung chứa trong data từ người quan tâm đến Official Account. Tin nhắn này sẽ bị ẩn trên cửa sổ chat trên máy của người quan tâm.<br>- Type oa.query.show: Payload là một chuỗi ký tự ví dụ “#eSMS”. Khi người quan tâm bấm vào action, hệ thống sẽ gửi một tin nhắn có nội dung chứa trong data từ người quan tâm đến Official Account. Tin nhắn này sẽ hiện trên cửa sổ chat trên máy của người quan tâm.<br>- Type oa.open.phone: Khi người quan tâm click vào action, cửa sổ call trên điện thoại của người quan tâm sẽ được mở với thông tin số điện thoại là giá trị của phone_code. <br><br></p></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>eSMS sẽ trả về kết quả của tin nhắn này.<br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#cd0e23a3-5aa5-4198-a8bb-be0d8e450df9">ở đây</a>.<br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr></tbody></table>
+<table><thead><tr><th width="135">Tham số</th><th width="109">Kiểu dữ liệu </th><th width="136" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey eSMS cung cấp.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey eSMS cung cấp.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>User_id</td><td>string</td><td>true</td><td>Userid cần gửi đến, đây là userid của zalo.</td></tr><tr><td>text</td><td>string</td><td>false</td><td>Tiêu đề của ảnh<br> Giới hạn tối đa là 2.000 ký tự</td></tr><tr><td>attachment</td><td>string</td><td>true</td><td><p>Tittle: mô tả của action.</p><p>Default_action<br>- Type oa.open.url: Url sẽ được mở trong ứng dụng Zalo khi người quan tâm bấm vào action<br>- Type oa.open.sms: Khi người quan tâm click vào action, cửa sổ sms trên điện thoại của người quan tâm sẽ được mở với 2 thông tin sẵn có là phone code và nội dung tin nhắn trong data.<br>- Type oa.query.hide: Payload là một chuỗi ký tự ví dụ “#eSMS”. Khi người quan tâm bấm vào action, hệ thống sẽ gửi một tin nhắn có nội dung chứa trong data từ người quan tâm đến Official Account. Tin nhắn này sẽ bị ẩn trên cửa sổ chat trên máy của người quan tâm.<br>- Type oa.query.show: Payload là một chuỗi ký tự ví dụ “#eSMS”. Khi người quan tâm bấm vào action, hệ thống sẽ gửi một tin nhắn có nội dung chứa trong data từ người quan tâm đến Official Account. Tin nhắn này sẽ hiện trên cửa sổ chat trên máy của người quan tâm.<br>- Type oa.open.phone: Khi người quan tâm click vào action, cửa sổ call trên điện thoại của người quan tâm sẽ được mở với thông tin số điện thoại là giá trị của phone_code. </p></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>eSMS sẽ trả về kết quả của tin nhắn này.<br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#cd0e23a3-5aa5-4198-a8bb-be0d8e450df9">ở đây</a>.<br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi của tin.<br>Không truyền khi tin muốn tin nhắn gửi đi liền.<br>Định dạng: yyyy-mm-dd hh:MM:ss</td></tr></tbody></table>
 
 ***
 
