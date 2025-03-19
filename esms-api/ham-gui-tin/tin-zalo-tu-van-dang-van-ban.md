@@ -12,12 +12,11 @@
 curl --location 'https://rest.esms.vn/mainservice.svc/json/SendZaloFollowerMessage_V4_post_json/' \
 --header 'Content-Type: application/json' \
 --data '{
- "ApiKey":"{{ApiKey}}",
- "SecretKey":"{{SecretKey}}",
- "OAID":"{{OAID}}",
- "User_id":"{{User_id}}",
- "Content":"Tin Zalo Tư vấn dạng văn bản",
- "CallbackUrl": "{{CallbackUrl}}"
+   "ApiKey":"{{ApiKey}}",
+   "SecretKey":"{{SecretKey}}",
+   "OAID":"{{OAID}}",
+   "User_id":"{{User_id}}",
+   "Content":"Tin Zalo Tư vấn dạng văn bản"
 }'
 ```
 

@@ -14,8 +14,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessa
 --data '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
-    "OAID": "{{OAID}}",
-    "CallbackUrl": "{{CallbackUrl}}", 
+    "OAID": "{{OAID}}", 
     "Payload": {
         "recipient": {
             "user_id": "{{user_id}}"
