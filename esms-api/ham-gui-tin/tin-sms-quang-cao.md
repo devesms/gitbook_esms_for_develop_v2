@@ -9,7 +9,7 @@ description: >-
 ## **HTTP request**&#x20;
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname\_json/](http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname\_json/)
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname\_json/](http://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandname_json/)
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
@@ -23,14 +23,13 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandn
     "Brandname": "{{Brandname}}",
     "Content": "{{Content}}",
     "Phones": [
-        "{{Phones}}",
-        "{{Phones}}",
-        "{{Phones}}"
+        "0918238965",
+        "0901888484",
+        "..."
     ],
-    "SmsType": "1",
-    "SendDate": "{{SendDate}}",
-    "Sandbox":"{{Sandbox}}"
+    "SmsType": "1"
 }'
+// Mỗi request tối thiểu 30 số và tối đa 5000 số.
 ```
 
 * **Cấu trúc body của request:**
