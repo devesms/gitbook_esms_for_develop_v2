@@ -3,7 +3,7 @@
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [http://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V6/hash\_phone/](http://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V6/hash\_phone/)
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V6/hash\_phone/](http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/hash_phone/)
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
@@ -17,7 +17,7 @@
 
 {% code overflow="wrap" %}
 ```json
-curl --location 'http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/hash_phone/' \
+curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/hash_phone/' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "ApiKey": "APIKEYCUABAN",
