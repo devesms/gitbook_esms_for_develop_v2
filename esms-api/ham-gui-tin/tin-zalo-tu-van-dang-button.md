@@ -64,6 +64,8 @@ curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendZa
         }
     }
 }'
+
+// Truyền \r\n để gửi nội dung xuống dòng
 ```
 
 

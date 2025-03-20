@@ -36,6 +36,8 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessa
         }
     }
 }'
+
+// Truyền \r\n để gửi nội dung xuống dòng
 ```
 
 
