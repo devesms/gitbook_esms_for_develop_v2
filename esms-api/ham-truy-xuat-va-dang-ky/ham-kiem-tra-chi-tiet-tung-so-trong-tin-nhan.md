@@ -16,7 +16,7 @@ description: >-
 
 {% code overflow="wrap" %}
 ```
-curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&RefId={{SMSID}}'
+curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&RefId=1e8caf001e494a9b873cc70535ad8b15'
 ```
 {% endcode %}
 
@@ -40,6 +40,20 @@ curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/GetSmsRecei
             "Phone": "0901888484",
             "Retry": 0,
             "SentResult": true
+        },
+        {
+            "IsSent": true,
+            "NetworkName": "Vinaphone",
+            "Phone": "0918238965",
+            "Retry": 0,
+            "SentResult": false
+        },
+        {
+            "IsSent": true,
+            "NetworkName": "Mobifone",
+            "Phone": "0765418062",
+            "Retry": 0,
+            "SentResult": false
         }
     ]
 }
