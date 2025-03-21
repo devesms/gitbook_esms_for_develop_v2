@@ -21,7 +21,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId=6
 
 * **Câu trúc body của request:**
 
-<table><thead><tr><th width="139">Tham số</th><th width="129">Kiểu dữ liệu </th><th width="155" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>RefId</td><td>string</td><td>true</td><td>SmsId hệ thống trả về từ mỗi hàm gửi tin nhắn.</td></tr><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr></tbody></table>
+<table><thead><tr><th width="139">Tham số</th><th width="129">Kiểu dữ liệu </th><th width="155" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>RefId</td><td>string</td><td>true</td><td>SmsId hệ thống trả về từ mỗi hàm gửi tin nhắn.</td></tr><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey eSMS cung cấp.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey eSMS cung cấp.</td></tr></tbody></table>
 
 ***
 
@@ -57,7 +57,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId=6
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body của response:**
+**Cấu trúc body của response:**
 
 <table><thead><tr><th width="174">Thuộc tính</th><th width="155">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResponse</td><td>string</td><td>Mã trả về.</td></tr><tr><td>SMSID</td><td>string</td><td>SmsId kiểm tra.</td></tr><tr><td>SendFailed</td><td>string</td><td>Số lượng tin thất bại.</td></tr><tr><td>SendStatus</td><td>string</td><td>Trạng thái tin nhắn<br>1: Chờ Duyệt<br>2: Chờ gửi.<br>5: Đã gửi xong.</td></tr><tr><td>SendSuccess</td><td>string</td><td>Số lượng tin thành công.</td></tr><tr><td>TotalPrice</td><td>string</td><td>Tổng tiền của đơn.</td></tr><tr><td>TotalReceiver</td><td>string</td><td>Số lượng người nhận.</td></tr><tr><td>TotalSent</td><td>string</td><td>Số lượng gửi.</td></tr></tbody></table>
 

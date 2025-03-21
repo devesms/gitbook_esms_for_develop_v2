@@ -61,7 +61,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/GetBalance_json' \
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body của response:**
+**Cấu trúc body của response:**
 
 | Thuộc tính   | Kiểu dữ liệu | Mô tả                           |
 | ------------ | ------------ | ------------------------------- |
