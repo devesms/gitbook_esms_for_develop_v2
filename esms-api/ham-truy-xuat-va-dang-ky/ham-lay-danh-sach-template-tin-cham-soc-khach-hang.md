@@ -1,8 +1,8 @@
 ---
 description: >-
-  Đối với các Brandname SMS, các doanh nghiệp sẽ cần đăng ký Template là các tin
-  nhắn mẫu với nhà mạng trước khi được gửi. Hàm này cho phép lấy về danh sách
-  các Template của 1 Brandname thuộc tài khoản
+  Đối với các tin nhắn CSKH, doanh nghiệp cần đăng ký trước các mẫu tin nhắn
+  (Template) với nhà mạng trước khi gửi. Hàm này cho phép truy xuất danh sách
+  Template của một Brandname thuộc tài khoản.
 ---
 
 # Hàm lấy danh sách template tin chăm sóc khách hàng
@@ -19,18 +19,16 @@ description: >-
 curl --location 'https://rest.esms.vn/MainService.svc/json/GetTemplate/' \
 --header 'Content-Type: application/json' \
 --data '{
- "ApiKey":"{{ApiKey}}",
- "SecretKey":"{{SecretKey}}",
- "SmsType":"2",
- "Brandname":"{{Brandname}}"
+    "ApiKey": "{{ApiKey}}",
+    "SecretKey": "{{SecretKey}}",
+    "SmsType": "2",
+    "Brandname": "Baotrixemay"
 }'
 ```
 
 * **Cấu trúc body của request:**
 
 <table><thead><tr><th>Tham số</th><th width="136">Kiểu dữ liệu</th><th width="167" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr><tr><td>SmsType</td><td>string</td><td>true</td><td>Loại tin nhắn<br>2: Loại tin Chăm sóc khách hàng.</td></tr><tr><td>BrandName</td><td>string</td><td>true</td><td>Tên brandname.</td></tr></tbody></table>
-
-
 
 ***
 
@@ -92,9 +90,13 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/GetTemplate/' \
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body của response:**
+**Cấu trúc body của response:**
 
-<table><thead><tr><th width="175">Thuộc tính</th><th>Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>NetworkID</td><td>string</td><td>1: Viettel<br>2: Mobi<br>3: Vinaphone<br>4: Vietnammobile<br>5: Gtel<br>6: Itel<br>7: Reddi</td></tr><tr><td>TempContent</td><td>string</td><td>Content đã đăng ký với nhà mạng</td></tr><tr><td>TempId</td><td>string</td><td>TempId của nhà mạng</td></tr></tbody></table>
+<table><thead><tr><th width="186.5999755859375">Thuộc tính</th><th width="167.199951171875">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>BrandnameTemplates</td><td>object</td><td>Thông tin chi tiết template.</td></tr><tr><td>CodeResult</td><td>string</td><td>Mã trả về</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi)</td></tr></tbody></table>
+
+**Cấu trúc thuộc tính BrandnameTemplates**
+
+<table><thead><tr><th width="183.79998779296875">Thuộc tính</th><th width="170.800048828125">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>NetworkID</td><td>string</td><td>Template có thể gửi với nhà mạng nào<br><br>1: Viettel<br>2: Mobi<br>3: Vinaphone<br>4: Vietnammobile<br>5: Gtel<br>6: Itel<br>7: Reddi</td></tr><tr><td>TempContent</td><td>string</td><td>Nội dung template đã đăng ký.</td></tr><tr><td>TempId</td><td>string</td><td>TempId của nhà mạng</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu của các ngôn ngữ ở link:**</mark>_ [**Code mẫu**](https://samplefordevelopers.esms.vn/#ca4176c1-a1af-4d93-bf29-81cd9dc3a85c) **.**
