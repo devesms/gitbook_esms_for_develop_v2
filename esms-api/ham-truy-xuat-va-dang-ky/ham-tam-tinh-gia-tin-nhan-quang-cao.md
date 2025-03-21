@@ -30,7 +30,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SummaryMultipleSMSBra
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="187">Thuốc tính</th><th width="146">Kiểu dữ liệu</th><th width="137" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>APIKEY</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SECRETKEY</td><td>string</td><td>true</td><td>SecretKey của tài khoản.</td></tr><tr><td>CONTENT</td><td>string</td><td>true</td><td>Nội dung tin nhắn.</td></tr><tr><td>SMSTYPE</td><td>string</td><td>true</td><td>Loại tin nhắn, SmsType = 1: Loại tin Quảng cáo.</td></tr><tr><td>BRANDNAME</td><td>string</td><td>true</td><td>Tên thương hiệu.</td></tr><tr><td>PHONE</td><td>string</td><td>true</td><td>Số điện thoại nhận tin.</td></tr></tbody></table>
+<table><thead><tr><th width="187">Thuốc tính</th><th width="146">Kiểu dữ liệu</th><th width="137" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>APIKEY</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SECRETKEY</td><td>string</td><td>true</td><td>SecretKey của tài khoản.</td></tr><tr><td>CONTENT</td><td>string</td><td>true</td><td>Nội dung tin nhắn.</td></tr><tr><td>SMSTYPE</td><td>string</td><td>true</td><td>Loại tin nhắn<br><br>1: Loại tin Quảng cáo</td></tr><tr><td>BRANDNAME</td><td>string</td><td>true</td><td>Tên thương hiệu.</td></tr><tr><td>PHONE</td><td>string</td><td>true</td><td>Số điện thoại nhận tin.</td></tr></tbody></table>
 
 ***
 
@@ -74,7 +74,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SummaryMultipleSMSBra
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body của response:**
+**Cấu trúc body của response:**
 
 <table><thead><tr><th width="181">Thuốc tính</th><th width="153">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td> CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td> ErrorMessage</td><td>string</td><td>Nội dung thông báo.</td></tr><tr><td>TotalPrice</td><td>string</td><td>Tổng tiền tin.</td></tr><tr><td>TotalReceiver</td><td>string</td><td>Tổng số điện thoại nhận tin.</td></tr></tbody></table>
 
