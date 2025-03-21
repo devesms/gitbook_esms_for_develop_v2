@@ -3,13 +3,15 @@
 ## HTTP request
 
 \
-<mark style="color:green;">**`GET`**</mark> [https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage\_V4\_get?Phone=\{{Phone\}}\&Content=\{{Content\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&SmsType=2\&BrandName=\{{BrandName\}}](https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage\_V4\_get?Phone=\{{Phone\}}\&Content=\{{Content\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&SmsType=2\&BrandName=\{{BrandName\}})
+<mark style="color:green;">**`GET`**</mark> [https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage\_V4\_get?Phone=\{{Phone\}}\&Content=\{{Content\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&SmsType=2\&BrandName=\{{BrandName\}}](https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage_V4_get?Phone=\{{Phone\}}\&Content=\{{Content\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&SmsType=2\&BrandName=\{{BrandName\}})
 
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
+{% code overflow="wrap" %}
 ```
-curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage_V4_get?Phone={{Phone}}&Content={{Content}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&SmsType=2&BrandName={{BrandName}}'
+curl --location 'https://rest.esms.vn/MainService.svc/json/SummaryMultipleMessage_V4_get?Phone=0901888484&Content=456756756%20la%20ma%20xac%20minh%20dang%20ky%20Baotrixemay%20cua%20ban&ApiKey={{ApiKey}}&SecretKey={{64120417409A6F235472B9A6762570}}&SmsType=2&BrandName=Baotrixemay'
 ```
+{% endcode %}
 
 * **Cấu trúc body của request:**
 
@@ -56,7 +58,7 @@ curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/SummaryMult
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body của response:**
+**Cấu trúc body của response:**
 
 | Thuộc tính    | Kiểu dữ liệu | Mô tả                        |
 | ------------- | ------------ | ---------------------------- |
