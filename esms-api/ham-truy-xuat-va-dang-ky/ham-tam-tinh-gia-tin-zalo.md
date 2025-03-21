@@ -3,7 +3,7 @@
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage\_V4\_post\_json/](https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage\_V4\_post\_json/)\
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage\_V4\_post\_json/](https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/)\
 
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
@@ -60,9 +60,9 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4
 {% endtab %}
 {% endtabs %}
 
-* **Câu trúc body response:**
+**Câu trúc body response:**
 
-<table><thead><tr><th width="194">Thuốc tính</th><th width="189">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Nội dung thông báo.</td></tr><tr><td>TotalPrice</td><td>string</td><td>Tổng tiền tạm tính.</td></tr><tr><td>TotalReceiver</td><td>string</td><td>Tổng số điện thoại nhận tin.</td></tr></tbody></table>
+<table><thead><tr><th width="194">Thuốc tính</th><th width="189">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi).</td></tr><tr><td>TotalPrice</td><td>string</td><td>Tổng tiền tạm tính.</td></tr><tr><td>TotalReceiver</td><td>string</td><td>Tổng số điện thoại nhận tin.</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#a1b040da-0c02-4e53-b1da-c14e254a197d)**.**
