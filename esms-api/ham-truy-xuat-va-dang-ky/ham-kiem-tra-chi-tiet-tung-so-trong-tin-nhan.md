@@ -10,7 +10,7 @@ description: >-
 ## HTTP request
 
 \
-<mark style="color:green;">**`GET`**</mark> [http://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus\_get?ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&RefId=\{{SMSID\}}](http://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&RefId=\{{SMSID\}})
+<mark style="color:green;">**`GET`**</mark> [https://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus\_get?ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&RefId=\{{SMSID\}}](http://rest.esms.vn/MainService.svc/json/GetSmsReceiverStatus_get?ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&RefId=\{{SMSID\}})
 
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
