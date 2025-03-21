@@ -6,18 +6,18 @@ description: >-
 
 # Hàm kiểm tra tin nhắn theo SMSID
 
-## HTTP request
+#### HTTP Request
 
 \
 <mark style="color:green;">**`GET`**</mark> [https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId=\{{SMSID\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}](https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId=\{{SMSID\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}})
 
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
-
-
+{% code overflow="wrap" %}
 ```json
-curl --location --globoff 'http://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId={{SMSID}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}'
+curl --location 'https://rest.esms.vn/MainService.svc/json/GetSendStatus?RefId=6007b4bc6db546b194062c19620cc820200&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}' \
 ```
+{% endcode %}
 
 * **Câu trúc body của request:**
 
