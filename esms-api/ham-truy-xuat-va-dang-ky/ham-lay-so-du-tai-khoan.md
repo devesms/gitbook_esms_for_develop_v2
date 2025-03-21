@@ -11,24 +11,24 @@ description: >-
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [http://rest.esms.vn/MainService.svc/json/GetBalance\_json](http://rest.esms.vn/MainService.svc/json/GetBalance\_json)\
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/GetBalance\_json](https://rest.esms.vn/MainService.svc/json/GetBalance_json)\
 
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
 ```json
-curl --location 'http://rest.esms.vn/MainService.svc/json/GetBalance_json' \
+curl --location 'https://rest.esms.vn/MainService.svc/json/GetBalance_json' \
 --header 'Content-Type: application/json' \
 --data '{
-"ApiKey":"{{ApiKey}}",
-"SecretKey":"{{SecretKey}}"
+    "ApiKey": "{{ApiKey}}",
+    "SecretKey": "{{SecretKey}}"
 }'
 ```
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="145">Tham số</th><th width="140">Kiểu dữ liệu</th><th data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey của tài khoản.</td></tr></tbody></table>
+<table><thead><tr><th width="164.20001220703125">Tham số</th><th width="140">Kiểu dữ liệu</th><th width="142.199951171875" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey eSMS cung cấp.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey eSMS cung cấp.</td></tr></tbody></table>
 
 ***
 
