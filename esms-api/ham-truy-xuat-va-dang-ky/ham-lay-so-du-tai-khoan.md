@@ -11,8 +11,7 @@ description: >-
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/GetBalance\_json](https://rest.esms.vn/MainService.svc/json/GetBalance_json)\
-
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/GetBalance\_json](https://rest.esms.vn/MainService.svc/json/GetBalance_json)
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
