@@ -1,6 +1,6 @@
 # Hàm lấy danh sách template Zalo
 
-HTTP request
+## HTTP request
 
 \
 <mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/GetTemplate/](https://rest.esms.vn/MainService.svc/json/GetTemplate/)
@@ -19,7 +19,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/GetTemplate/' \
 }'
 ```
 
-* Cấu trúc body của request:
+* **Cấu trúc body của request:**
 
 <table><thead><tr><th width="159">Tham số</th><th width="126">Kiểu dữ liệu </th><th width="155" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr><tr><td>OAId</td><td>string</td><td>true</td><td>ID của OA cần lấy template.</td></tr><tr><td>SmsType</td><td>string</td><td>true</td><td>Loại tin<br>24: Zalo ưu tiên.<br>25: Zalo bình thường.</td></tr></tbody></table>
 
@@ -66,9 +66,17 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/GetTemplate/' \
 {% endtab %}
 {% endtabs %}
 
-* Cấu trúc body response:
+**Cấu trúc body response:**
 
-<table><thead><tr><th width="174">Thuộc tính</th><th width="201">Kiểu dữ liệu </th><th>Mô tả</th></tr></thead><tbody><tr><td>TempContent</td><td>string</td><td>Nội dung của template.</td></tr><tr><td>Tempid</td><td>string</td><td>Template ID.</td></tr><tr><td>TempName</td><td>string</td><td>Tên template.</td></tr><tr><td>ZNSTempDetail</td><td>string</td><td>Chi tiết của template.</td></tr><tr><td>Limit</td><td>string</td><td>Độ dài của template.</td></tr><tr><td>Param</td><td>string</td><td>Tên biến.</td></tr><tr><td>ParamLevel</td><td>string</td><td>Thứ tự biến.</td></tr><tr><td>RequireType</td><td>string</td><td>Kiểu dữ liệu của biến.</td></tr></tbody></table>
+<table><thead><tr><th width="174.5999755859375">Thuộc tính</th><th width="136.4000244140625">Kiểu dữ liệu </th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi).</td></tr><tr><td>ZNSTemplates</td><td>object</td><td>Thông tin chi tiết template.</td></tr></tbody></table>
+
+**Cấu trúc thuộc tính ZNSTemplates**
+
+<table><thead><tr><th width="174">Thuộc tính</th><th width="141.800048828125">Kiểu dữ liệu </th><th>Mô tả</th></tr></thead><tbody><tr><td>TempContent</td><td>string</td><td>Nội dung của template.</td></tr><tr><td>Tempid</td><td>string</td><td>Template ID.</td></tr><tr><td>TempName</td><td>string</td><td>Tên template.</td></tr><tr><td>ZNSTempDetail</td><td>object</td><td>Thông tin chi tiết kiểu biến.</td></tr></tbody></table>
+
+**Cấu trúc thuộc tính ZNSTempDetail**
+
+<table><thead><tr><th width="172.199951171875">Thuộc tính</th><th width="144.60009765625">Kiểu dữ liệu </th><th>Mô tả</th></tr></thead><tbody><tr><td>Limit</td><td>string</td><td>Giới hạn độ dài nội dung truyền vào.<br>Khi gửi quá giới hạn này sẽ bị sai template.</td></tr><tr><td>Param</td><td>string</td><td>Tên biến.</td></tr><tr><td>ParamLevel</td><td>string</td><td>Thứ tự của biến</td></tr><tr><td>RequireType</td><td>string</td><td>Kiểu dữ liệu của biến.<br><br>- type_text<br>- type_number <strong>(chỉ truyền số từ 0 đến 9, tối đa là 12 số)</strong><br>- type_date <strong>(truyền theo định dạng dd/MM/yyyy)</strong><br>- type_cta_url</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#d201e3b3-5f46-4db7-b829-2b730a29b6b4)**.**
