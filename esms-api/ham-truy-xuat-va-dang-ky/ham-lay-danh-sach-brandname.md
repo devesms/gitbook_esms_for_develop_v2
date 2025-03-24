@@ -60,9 +60,9 @@ Request hợp lệ.
 
 **Cấu trúc body của response:**
 
-<table><thead><tr><th width="181.4000244140625">Thuộc tính</th><th width="189.7999267578125">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td> CodeResponse</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ListBrandName</td><td>object</td><td>Danh sách brandname hiện đang kích hoạt ở tài khoản.</td></tr></tbody></table>
+<table><thead><tr><th width="181.4000244140625">Thuộc tính</th><th width="189.7999267578125">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td> CodeResponse</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ListBrandName</td><td>array</td><td>Danh sách brandname hiện đang kích hoạt ở tài khoản.</td></tr></tbody></table>
 
-**Cấu trúc thuộc tính ListBrandName**
+**Cấu trúc thuộc tính từng object ListBrandName**
 
 <table><thead><tr><th width="185">Thuộc tính</th><th width="190.60009765625">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>Brandname</td><td>string</td><td>Tên brandname.</td></tr><tr><td>Type</td><td>string</td><td>Loại brandname<br><br>1: brandname quảng cáo.<br>2: brandname CSKH.<br>23: brandname Viber.</td></tr></tbody></table>
 

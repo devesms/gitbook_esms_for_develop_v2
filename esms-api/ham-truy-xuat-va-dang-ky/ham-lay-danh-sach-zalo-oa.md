@@ -61,9 +61,9 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetListZOA/' \
 
 **Cấu trúc body của response:**
 
-<table><thead><tr><th width="165.800048828125">Thuốc tính</th><th width="168.60009765625">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi).</td></tr><tr><td>ZOAList</td><td>object</td><td>Danh sách OA đang hoạt động của tài khoản.</td></tr></tbody></table>
+<table><thead><tr><th width="165.800048828125">Thuốc tính</th><th width="168.60009765625">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi).</td></tr><tr><td>ZOAList</td><td>array</td><td>Danh sách OA đang hoạt động của tài khoản.</td></tr></tbody></table>
 
-**Cấu trúc thuộc tính ZOAList**
+**Cấu trúc thuộc tính từng object trong ZOAList**
 
 <table><thead><tr><th width="168">Thuốc tính</th><th width="165">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>OAID</td><td>string</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. <br>Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này.<br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>OAName</td><td>string</td><td>Tên của OA.</td></tr></tbody></table>
 

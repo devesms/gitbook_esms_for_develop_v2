@@ -70,11 +70,11 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/GetTemplate/' \
 
 <table><thead><tr><th width="174.5999755859375">Thuộc tính</th><th width="136.4000244140625">Kiểu dữ liệu </th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi).</td></tr><tr><td>ZNSTemplates</td><td>object</td><td>Thông tin chi tiết template.</td></tr></tbody></table>
 
-**Cấu trúc thuộc tính ZNSTemplates**
+**Cấu trúc thuộc tính từng object trong ZNSTemplates**
 
 <table><thead><tr><th width="174">Thuộc tính</th><th width="141.800048828125">Kiểu dữ liệu </th><th>Mô tả</th></tr></thead><tbody><tr><td>TempContent</td><td>string</td><td>Nội dung của template.</td></tr><tr><td>Tempid</td><td>string</td><td>Template ID.</td></tr><tr><td>TempName</td><td>string</td><td>Tên template.</td></tr><tr><td>ZNSTempDetail</td><td>object</td><td>Thông tin chi tiết kiểu biến.</td></tr></tbody></table>
 
-**Cấu trúc thuộc tính ZNSTempDetail**
+**Cấu trúc thuộc tính từng object trong ZNSTempDetail**
 
 <table><thead><tr><th width="172.199951171875">Thuộc tính</th><th width="144.60009765625">Kiểu dữ liệu </th><th>Mô tả</th></tr></thead><tbody><tr><td>Limit</td><td>string</td><td>Giới hạn độ dài nội dung truyền vào.<br>Khi gửi quá giới hạn này sẽ bị sai template.</td></tr><tr><td>Param</td><td>string</td><td>Tên biến.</td></tr><tr><td>ParamLevel</td><td>string</td><td>Thứ tự của biến</td></tr><tr><td>RequireType</td><td>string</td><td>Kiểu dữ liệu của biến.<br><br>- type_text<br>- type_number <strong>(chỉ truyền số từ 0 đến 9, tối đa là 12 số)</strong><br>- type_date <strong>(truyền theo định dạng dd/MM/yyyy)</strong><br>- type_cta_url</td></tr></tbody></table>
 

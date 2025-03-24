@@ -85,9 +85,9 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/GetSmsSentData_V2' \
 
 **Cấu trúc body của response:**
 
-<table><thead><tr><th width="140.79998779296875">Thuộc tính</th><th width="130.5999755859375">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td> CodeResult</td><td>string</td><td> Mã trả về.</td></tr><tr><td>CountTotal</td><td>string</td><td>Tổng số tin nhắn.</td></tr><tr><td>SentData</td><td>object</td><td>Chi tiết tin nhắn.</td></tr></tbody></table>
+<table><thead><tr><th width="140.79998779296875">Thuộc tính</th><th width="130.5999755859375">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td> CodeResult</td><td>string</td><td> Mã trả về.</td></tr><tr><td>CountTotal</td><td>string</td><td>Tổng số tin nhắn.</td></tr><tr><td>SentData</td><td>array</td><td>Chi tiết tin nhắn.</td></tr></tbody></table>
 
-**Câu trúc thuộc tính SentData**
+**Câu trúc thuộc tính từng object trong SentData**
 
 <table><thead><tr><th width="142.60003662109375">Thuộc tính</th><th width="134">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>Campaign</td><td>string</td><td><p>Tên chiến dịch.</p><p><br>Lấy dữ liệu của tham số campaignid khi request gửi tin.</p></td></tr><tr><td>Content</td><td>string</td><td>Nội dung tin nhắn.</td></tr><tr><td>Phone</td><td>string</td><td>Số điện thoại nhận tin nhắn.</td></tr><tr><td>ReferenceId</td><td>string</td><td>SmsId trả về từ các hàm gửi tin nhắn.</td></tr><tr><td>SellPrice</td><td>string</td><td>Giá của tin.</td></tr><tr><td>SendResult</td><td>string</td><td><p>Kết quả cuối của tin nhắn<br></p><p>1: Tin đã được gửi thành công. <br>0: Tin thất bại. <br>2: Tin chưa xác định trạng thái.</p></td></tr><tr><td>SendStatus</td><td>string</td><td>Trạng thái tin nhắn:<br><br>0: Đang soạn thảo.<br>1: Chờ duyệt.<br>2: Chờ gửi.<br>4: Từ chối.<br>5: Đã gửi xong (Kiểm tra thêm SendResult để biết tin gửi thành công hay thất bại).<br>7: Đã gửi chờ báo cáo</td></tr><tr><td>SentTime</td><td>string</td><td>Thời gian gửi tin.</td></tr><tr><td>SmsId</td><td>string</td><td>Id của tin nhắn trên giao diện eSMS<br><img src="../../.gitbook/assets/image (1).png" alt=""></td></tr><tr><td>SmsType</td><td>string</td><td>Loại tin nhắn<br>1: Tin quảng cáo.<br>2: Tin CSKH.<br>8: Tin Cố định giá rẻ.<br>23: Tin Viber.<br>24: Zalo ưu tiên.<br>25: Zalo bình thường.</td></tr></tbody></table>
 

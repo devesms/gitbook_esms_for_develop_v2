@@ -76,9 +76,9 @@ curl --location --globoff 'https://rest.esms.vn/MainService.svc/json/GetSmsRecei
 
 **Cấu trúc body của response:**
 
-<table><thead><tr><th width="145.99993896484375">Thuộc tính</th><th width="151.39990234375">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ReceiverList</td><td>object</td><td>Chi tiết từng số trong tin nhắn.</td></tr></tbody></table>
+<table><thead><tr><th width="145.99993896484375">Thuộc tính</th><th width="151.39990234375">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ReceiverList</td><td>array</td><td>Chi tiết từng số trong tin nhắn.</td></tr></tbody></table>
 
-**Cấu trúc thuộc tính ReceiverList**
+**Cấu trúc thuộc tính từng object trong ReceiverList**
 
 <table><thead><tr><th width="145">Thuộc tính</th><th width="154.5999755859375">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>IsSent</td><td>string</td><td>Trạng thái đi tin:<br>true: tin đã được gửi.<br>false: tin chưa được gửi.</td></tr><tr><td>NetworkName</td><td>string</td><td>Nhà mạng của số điện thoại.</td></tr><tr><td>Phone</td><td>string</td><td>Số điện thoại.</td></tr><tr><td>Retry</td><td>string</td><td>Số lần gửi lại tin nhắn.</td></tr><tr><td>SentResult</td><td>string</td><td>Kết quả tin nhắn:<br>True: Gửi thành công.<br>False: Gửi thất bại.</td></tr></tbody></table>
 

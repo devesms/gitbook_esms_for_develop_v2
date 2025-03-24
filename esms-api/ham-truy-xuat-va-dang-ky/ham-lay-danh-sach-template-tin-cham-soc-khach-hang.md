@@ -92,9 +92,9 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/GetTemplate/' \
 
 **Cấu trúc body của response:**
 
-<table><thead><tr><th width="186.5999755859375">Thuộc tính</th><th width="167.199951171875">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>BrandnameTemplates</td><td>object</td><td>Thông tin chi tiết template.</td></tr><tr><td>CodeResult</td><td>string</td><td>Mã trả về</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi)</td></tr></tbody></table>
+<table><thead><tr><th width="186.5999755859375">Thuộc tính</th><th width="167.199951171875">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>BrandnameTemplates</td><td>array</td><td>Thông tin chi tiết template.</td></tr><tr><td>CodeResult</td><td>string</td><td>Mã trả về</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi)</td></tr></tbody></table>
 
-**Cấu trúc thuộc tính BrandnameTemplates**
+**Cấu trúc thuộc tính từng object trong BrandnameTemplates**
 
 <table><thead><tr><th width="183.79998779296875">Thuộc tính</th><th width="170.800048828125">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>NetworkID</td><td>string</td><td>Template có thể gửi với nhà mạng nào<br><br>1: Viettel<br>2: Mobi<br>3: Vinaphone<br>4: Vietnammobile<br>5: Gtel<br>6: Itel<br>7: Reddi</td></tr><tr><td>TempContent</td><td>string</td><td>Nội dung template đã đăng ký.</td></tr><tr><td>TempId</td><td>string</td><td>TempId của nhà mạng</td></tr></tbody></table>
 
