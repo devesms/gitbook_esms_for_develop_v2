@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Hàm lấy danh sách Zalo Followers
 
 ## HTTP request&#x20;

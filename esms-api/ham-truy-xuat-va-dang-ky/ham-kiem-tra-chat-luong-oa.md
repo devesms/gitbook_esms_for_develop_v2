@@ -13,9 +13,9 @@
 curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/' \
 --header 'Content-Type: application/json' \
 --data '{
- "ApiKey": "{{ApiKey}}",
- "SecretKey": "{{SecretKey}}",
- "OAID": "{{OAID}}"
+     "ApiKey": "APIKEYCUABAN",
+     "SecretKey": "SECRETKEYCUABAN",
+     "OAID": "4097311281936189049"
 }'
 ```
 
@@ -53,9 +53,9 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetQuality/' \
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body của response:**
+**Cấu trúc body của response:**
 
-<table><thead><tr><th width="183">Thuốc tính</th><th width="159">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>Oa7dayQuality</td><td>string</td><td><p>Chất lượng gửi thông báo ZNS trong 7 ngày gần nhất của OA. Các giá trị trả về:</p><p></p><ul><li>HIGH - Mức độ chất lượng tốt.</li><li>MEDIUM - Mức độ chất lượng trung bình.</li><li>LOW - Mức độ chất lượng kém.</li><li>UNDEFINED - Mức độ chất lượng OA chưa được xác định (trường hợp OA không gửi thông báo ZNS nào trong khung thời gian đánh giá).</li></ul></td></tr><tr><td>OaCurrentQuality</td><td>string</td><td><p>Chất lượng gửi thông báo ZNS trong 48 giờ gần nhất của OA. Các giá trị trả về:</p><ul><li>HIGH - Mức độ chất lượng tốt .</li><li>MEDIUM - Mức độ chất lượng trung bình .</li><li>LOW - Mức độ chất lượng kém .</li><li>UNDEFINED - Mức độ chất lượng OA chưa được xác định (trường hợp OA không gửi thông báo ZNS nào trong khung thời gian đánh giá).</li></ul></td></tr></tbody></table>
+<table><thead><tr><th width="183">Thuốc tính</th><th width="159">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi).</td></tr><tr><td>Oa7dayQuality</td><td>string</td><td><p>Chất lượng gửi thông báo ZNS trong 7 ngày gần nhất của OA. Các giá trị trả về:</p><p></p><ul><li>HIGH - Mức độ chất lượng tốt.</li><li>MEDIUM - Mức độ chất lượng trung bình.</li><li>LOW - Mức độ chất lượng kém.</li><li>UNDEFINED - Mức độ chất lượng OA chưa được xác định (trường hợp OA không gửi thông báo ZNS nào trong khung thời gian đánh giá).</li></ul></td></tr><tr><td>OaCurrentQuality</td><td>string</td><td><p>Chất lượng gửi thông báo ZNS trong 48 giờ gần nhất của OA. Các giá trị trả về:</p><ul><li>HIGH - Mức độ chất lượng tốt .</li><li>MEDIUM - Mức độ chất lượng trung bình .</li><li>LOW - Mức độ chất lượng kém .</li><li>UNDEFINED - Mức độ chất lượng OA chưa được xác định (trường hợp OA không gửi thông báo ZNS nào trong khung thời gian đánh giá).</li></ul></td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu của các ngôn ngữ ở link:**</mark>_ [**Code mẫu**](https://samplefordevelopers.esms.vn/#b03f9576-0e10-4061-bdd0-4cecc82ef6c5) **.**

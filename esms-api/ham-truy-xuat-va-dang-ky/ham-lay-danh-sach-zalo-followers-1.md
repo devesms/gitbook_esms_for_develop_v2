@@ -95,9 +95,13 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/QueryListUID/' \
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body của response:**
+**Cấu trúc body của response:**
 
-<table><thead><tr><th width="168">Thuốc tính</th><th width="145">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Kết quả của request.</td></tr><tr><td>Data</td><td>string</td><td><ul><li>Count: Số lượng UID cần lấy.</li><li>Offset: Thứ tự UID trong danh sách trả về.</li><li>Tatal: Tổng UID thoả yêu cầu request.</li><li>Users: Danh sách UID lấy được.</li></ul></td></tr></tbody></table>
+<table><thead><tr><th width="165.44439697265625">Thuốc tính</th><th width="145.22216796875">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>Data</td><td>object</td><td>Chi tiết thông tin UI.</td></tr></tbody></table>
+
+**Cấu trúc thuộc tính từng object trong Data**
+
+<table><thead><tr><th width="168">Thuốc tính</th><th width="145">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>Count</td><td>string</td><td>Kết quả của request.</td></tr><tr><td>Offset</td><td>string</td><td>Thứ tự UID trong danh sách trả về</td></tr><tr><td>Tatal</td><td>string</td><td>Tổng UID thoả yêu cầu reque</td></tr><tr><td>Users</td><td>array</td><td>Danh sách UID lấy được</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu.**](https://samplefordevelopers.esms.vn/#2f26fb8e-2b78-4bbc-89a7-d739a7c32ff7)
