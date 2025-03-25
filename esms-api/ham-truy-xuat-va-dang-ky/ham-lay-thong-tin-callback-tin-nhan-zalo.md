@@ -34,7 +34,7 @@ curl --location 'https://status-sms.esms.vn/ZaloCallback/GetCallback' \
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="137">Tham số</th><th width="152">Kiểu dữ liệu</th><th width="160" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey của tài khoản.</td></tr><tr><td>ListRefid</td><td>string</td><td>true</td><td>Danh sách ReferenceId đã gửi tin.<br>Giới hạn 200 RefId, truyền nhiều hơn sẽ chỉ lấy callback của 200 RefId theo thứ tự từ trên xuống.</td></tr><tr><td>OAId</td><td>string</td><td>true</td><td>Id của OA đã gửi tin</td></tr></tbody></table>
+<table><thead><tr><th width="137">Tham số</th><th width="152">Kiểu dữ liệu</th><th width="160" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey của tài khoản.</td></tr><tr><td>ListRefid</td><td>array</td><td>true</td><td>Danh sách ReferenceId đã gửi tin.<br>Giới hạn 200 RefId, truyền nhiều hơn sẽ chỉ lấy callback của 200 RefId theo thứ tự từ trên xuống.</td></tr><tr><td>OAId</td><td>string</td><td>true</td><td>Id của OA đã gửi tin</td></tr></tbody></table>
 
 ***
 
@@ -73,7 +73,11 @@ curl --location 'https://status-sms.esms.vn/ZaloCallback/GetCallback' \
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body của response:**
+**Cấu trúc body của response:**
+
+<table><thead><tr><th width="166.333251953125">Thuộc tính</th><th width="156.6666259765625">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>Code</td><td>string</td><td>Mã trả về.</td></tr><tr><td>Message</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi)</td></tr><tr><td>Data_callback</td><td>array</td><td>Data callback chi tiết.</td></tr></tbody></table>
+
+**Cấu trúc thuộc tính từng object trong Data\_callback**
 
 <table><thead><tr><th width="168.33333333333331">Thuộc tính</th><th width="158">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>SMSID</td><td>string</td><td>ReferenceId của tin nhắn muốn xem callback.</td></tr><tr><td>SendFailed</td><td>string</td><td>Tổng số tin thất bại.</td></tr><tr><td>SendSuccess</td><td>string</td><td>Tổng số tin thành công.</td></tr><tr><td>SendStatus</td><td>string</td><td>Trạng thái tin nhắn.</td></tr><tr><td></td><td></td><td><ul><li>Trạng thái 2: Chờ gửi .</li><li>Trạng thái 5: Đã gửi .</li></ul></td></tr><tr><td>TotalPrice</td><td>string</td><td>Tổng số tiền của tin.</td></tr><tr><td>TotalReceiver</td><td>string</td><td>Tổng số tin.</td></tr><tr><td>TotalSent</td><td>string</td><td>Tổng số tin đã gửi.</td></tr><tr><td>RequestId</td><td>string</td><td>Request mà KH truyền vào API để gửi tin.</td></tr><tr><td>TypeId</td><td>string</td><td><p>Loại tin nhắn.</p><ul><li>Type 24: Zalo Ưu Tiên.</li></ul><ul><li>Type 25: Zalo Bình Thường.</li></ul></td></tr><tr><td>Telcoid</td><td>string</td><td><p>Mạng viễn thông của thuê bao nhận tin.</p><ul><li>Mạng số 1: Viettel</li></ul><ul><li>Mạng số 2: Mobifone</li></ul><ul><li>Mạng số 3: Vinaphone</li></ul><ul><li>Mạng số 4: Vietnammobile</li></ul><ul><li>Mạng số 5: Gmobile</li></ul><ul><li>Mạng số 6: Itel</li></ul><ul><li>Mạng số 7: Reddi</li></ul></td></tr><tr><td>PhoneNumber</td><td>string</td><td>Số điện thoại nhận tin.</td></tr><tr><td>CallbackUrl</td><td>string</td><td>Link nhận callback .</td></tr><tr><td>Partnerids</td><td>string</td><td>Mã của tin nhắn vừa được gửi (do Zalo trả về).</td></tr><tr><td>ErrorInfo</td><td>string</td><td>Mã lỗi và thông tin lỗi của tin nhắn.</td></tr><tr><td>OAId</td><td>string</td><td>Id của OA mà KH gửi tin.</td></tr><tr><td>ZnsTempId</td><td>string</td><td>Id của template KH gửi tin.</td></tr></tbody></table>
 
