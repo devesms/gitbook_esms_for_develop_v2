@@ -17,7 +17,7 @@ description: 'Lưu ý: Tối đa mỗi request giới hạn 50 đánh giá.'
 curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/' \
 --header 'Content-Type: application/json' \
 --data '{
-    "ApiKey": "APIKEYCUABAN",
+    "": "APIKEYCUABAN",
     "SecretKey": "SECRETKEYCUABAN",
     "OAID": "4097311281936189049",
     "TemplateID": "266986",
@@ -77,9 +77,13 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/' \
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc body response:**
+**Cấu trúc body response:**
 
-<table><thead><tr><th width="192">Thuốc tính</th><th width="155">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>feedbacks</td><td>string</td><td>Tổng số tin được gửi trong ngày.</td></tr><tr><td>msgId</td><td>string</td><td>SmsId của zalo.</td></tr><tr><td>note</td><td>string</td><td>Ghi chút của khách hàng cho đánh giá.</td></tr><tr><td>rate</td><td>string</td><td>Số sao khách hàng đánh giá.</td></tr><tr><td>submitDate</td><td>string</td><td>submitDate: Thời điểm khách hàng submit đánh giá. Biến submitDate sẽ có giá trị trong khoảng thời gian từ from_time đến to_time (được truyền vào từ request). <br><strong>Lưu ý: Tính theo timestamp (millisecond).</strong></td></tr><tr><td>trackingId</td><td>string</td><td>Tracking ID từ phía đối tác truyền vào khi gửi ZNS.</td></tr><tr><td>Total</td><td>string</td><td>Tổng số lượt đánh giá.</td></tr></tbody></table>
+<table><thead><tr><th width="172.59991455078125">Thuốc tính</th><th width="125.7999267578125">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi)</td></tr><tr><td>Data</td><td>array</td><td>Chi tiết đánh giá.</td></tr><tr><td>Total</td><td>string</td><td>Tổng số lượt đánh giá.</td></tr></tbody></table>
+
+**Cấu trúc thuộc tính từng object trong Data**
+
+<table><thead><tr><th width="170.4000244140625">Thuốc tính</th><th width="130.199951171875">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>feedbacks</td><td>string</td><td>Tổng số tin được gửi trong ngày.</td></tr><tr><td>msgId</td><td>string</td><td>SmsId của zalo.</td></tr><tr><td>note</td><td>string</td><td>Ghi chút của khách hàng cho đánh giá.</td></tr><tr><td>rate</td><td>string</td><td>Số sao khách hàng đánh giá.</td></tr><tr><td>submitDate</td><td>string</td><td>submitDate: Thời điểm khách hàng submit đánh giá. Biến submitDate sẽ có giá trị trong khoảng thời gian từ from_time đến to_time (được truyền vào từ request). <br><strong>Lưu ý: Tính theo timestamp (millisecond).</strong></td></tr><tr><td>trackingId</td><td>string</td><td>Tracking ID từ phía đối tác truyền vào khi gửi ZNS.</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#c36498c6-2153-494c-9795-36c85330aa33)**.**
