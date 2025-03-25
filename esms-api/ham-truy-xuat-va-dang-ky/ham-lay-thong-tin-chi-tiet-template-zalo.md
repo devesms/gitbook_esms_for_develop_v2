@@ -7,9 +7,11 @@
 
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
+{% code overflow="wrap" %}
 ```json
 curl --location -g 'https://rest.esms.vn/MainService.svc/json/GetZnsTemplateInfo?TemplateId={{TemplateId}}&ApiKey={{ApiKey}}&SecretKey={{SecretKey}}&OAId={{OAId}}'
 ```
+{% endcode %}
 
 * **Cấu trúc body của request:**
 
@@ -83,17 +85,21 @@ curl --location -g 'https://rest.esms.vn/MainService.svc/json/GetZnsTemplateInfo
 {% endtab %}
 {% endtabs %}
 
-* **Cấu trúc thuộc tính data.ListButtons**
+**Cấu trúc body của response:**
 
-<table><thead><tr><th width="161">Thuộc tính</th><th width="166">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>Content</td><td>string</td><td>Đường dẫn liên kết/số điện thoại.</td></tr><tr><td>Title</td><td>string</td><td>Nội dung Button.</td></tr><tr><td>Type</td><td>integer</td><td><p>Danh sách button:</p><p>1: Đến trang của doanh nghiệp<br>2: Gọi điện <br>3: Đến trang thông tin OA <br>4: Đến ứng dụng Zalo Mini App của doanh nghiệp <br>5: Đến trang tải ứng dụng <br>6: Đến trang phân phối sản phẩm <br>7: Đến trang web/Zalo Mini App khác <br>8: Đến ứng dụng khác</p></td></tr></tbody></table>
+<table><thead><tr><th width="161.888916015625">Thuộc tính</th><th width="164.1109619140625">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>Data</td><td>object</td><td>Thông tin chi tiết template.</td></tr><tr><td>Error</td><td>string</td><td>Mã trả về.</td></tr><tr><td>Message</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi).</td></tr></tbody></table>
 
-* **Cấu trúc thuộc tính data.listParams**
+**Cấu trúc thuộc tính từng object trong Data**
 
-<table><thead><tr><th width="162">Thuộc tính</th><th width="167">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>Name</td><td>string</td><td>Tên thuộc tính.</td></tr><tr><td>Require</td><td>boolean</td><td>Tính bắt buộc của thuộc tính.</td></tr><tr><td>Type</td><td>string</td><td>Định dạng validate của thuộc tính.</td></tr><tr><td>MaxLength</td><td>int</td><td>Số kí tự tối đa được truyền vào thuộc tính.</td></tr><tr><td>MinLength</td><td>int</td><td>Số kí tự tối thiểu được truyền vào thuộc tính.</td></tr><tr><td>AcceptNull</td><td>boolean</td><td>Thông tin cho biết thuộc tính có thể nhận giá trị rỗng hay không.</td></tr></tbody></table>
+<table><thead><tr><th width="171">Thuộc tính</th><th width="165">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>PreviewUrl</td><td>string</td><td>Đường dẫn đến bản xem trước của template.</td></tr><tr><td>Reason</td><td>string</td><td>Lý do template có trạng thái hiện tại:<br><br>- DISABLE/REJECT: Chi tiết lý do khi template ở trạng thái Disable hoặc Reject.<br>- ENABLE: Template đã được duyệt.<br>- DELETE: Template đã bị xóa.<br>- PENDING_REVIEW: Template đang được kiểm duyệt.<br></td></tr><tr><td>Status</td><td>string</td><td>Trạng thái template. Các trạng thái bao gồm: <br><br>- ENABLE: Trạng thái template được kích hoạt, có thể sử dụng để gửi thông báo ZNS.<br>- PENDING_REVIEW: Trạng thái template chờ kiểm duyệt. <br>- DELETE: Trạng thái template bị xóa. <br>- REJECT: Trạng thái template bị từ chối. <br>- DISABLE: Trạng thái template bị hủy kích hoạt.</td></tr><tr><td>TemplateId</td><td>string</td><td>ID của template.</td></tr><tr><td>TemplateName</td><td>string</td><td>Tên của template.</td></tr><tr><td>TemplateQuality</td><td>string</td><td>Trả về giá trị null cho trường thông tin này.</td></tr><tr><td>TemplateTag</td><td>string</td><td>Loại nội dung của template. Các giá trị trả về: <br><br>- TRANSACTION: Giao dịch <br>- CUSTOMER_CARE: Chăm sóc khách hàng <br>- PROMOTION: Hậu mãi</td></tr><tr><td>Timeout</td><td>long</td><td>Thời gian timeout của template.</td></tr><tr><td>ListButtons</td><td>array</td><td>Danh sách các buttons/CTAs của template <br>Chỉ áp dụng với 2 loại CTA: primary và secondary. <br>Không hiển thị các CTA từ image module và response button.</td></tr><tr><td>ListParams</td><td>array</td><td>Danh sách các thuộc tính của template.</td></tr></tbody></table>
 
-* **Cấu trúc thuộc tính data**
+**Cấu trúc thuộc tính từng object trong ListButtons**
 
-<table><thead><tr><th width="171">Thuộc tính</th><th width="165">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>PreviewUrl</td><td>string</td><td>Đường dẫn đến bản xem trước của template.</td></tr><tr><td>Reason</td><td>string</td><td>Lý do template có trạng thái hiện tại:<br><br>- DISABLE/REJECT: Chi tiết lý do khi template ở trạng thái Disable hoặc Reject.<br>- ENABLE: Template đã được duyệt.<br>- DELETE: Template đã bị xóa.<br>- PENDING_REVIEW: Template đang được kiểm duyệt.<br></td></tr><tr><td>Status</td><td>string</td><td>Trạng thái template. Các trạng thái bao gồm: <br><br>- ENABLE: Trạng thái template được kích hoạt, có thể sử dụng để gửi thông báo ZNS.<br>- PENDING_REVIEW: Trạng thái template chờ kiểm duyệt. <br>- DELETE: Trạng thái template bị xóa. <br>- REJECT: Trạng thái template bị từ chối. <br>- DISABLE: Trạng thái template bị hủy kích hoạt.</td></tr><tr><td>TemplateId</td><td>string</td><td>ID của template.</td></tr><tr><td>TemplateName</td><td>string</td><td>Tên của template.</td></tr><tr><td>TemplateQuality</td><td>string</td><td>Trả về giá trị null cho trường thông tin này.</td></tr><tr><td>TemplateTag</td><td>string</td><td>Loại nội dung của template. Các giá trị trả về: <br><br>- TRANSACTION: Giao dịch <br>- CUSTOMER_CARE: Chăm sóc khách hàng <br>- PROMOTION: Hậu mãi</td></tr><tr><td>Timeout</td><td>long</td><td>Thời gian timeout của template.</td></tr><tr><td>ListButtons</td><td>object array</td><td>Danh sách các buttons/CTAs của template <br>Chỉ áp dụng với 2 loại CTA: primary và secondary. <br>Không hiển thị các CTA từ image module và response button.</td></tr><tr><td>ListParams</td><td>object array</td><td>Danh sách các thuộc tính của template.</td></tr></tbody></table>
+<table><thead><tr><th width="168.11102294921875">Thuộc tính</th><th width="169">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>Content</td><td>string</td><td>Đường dẫn liên kết/số điện thoại.</td></tr><tr><td>Title</td><td>string</td><td>Nội dung Button.</td></tr><tr><td>Type</td><td>integer</td><td><p>Danh sách button:</p><p>1: Đến trang của doanh nghiệp<br>2: Gọi điện <br>3: Đến trang thông tin OA <br>4: Đến ứng dụng Zalo Mini App của doanh nghiệp <br>5: Đến trang tải ứng dụng <br>6: Đến trang phân phối sản phẩm <br>7: Đến trang web/Zalo Mini App khác <br>8: Đến ứng dụng khác</p></td></tr></tbody></table>
+
+**Cấu trúc thuộc tính từng object trong ListParams**
+
+<table><thead><tr><th width="165.44439697265625">Thuộc tính</th><th width="176.333251953125">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>Name</td><td>string</td><td>Tên thuộc tính.</td></tr><tr><td>Require</td><td>boolean</td><td>Tính bắt buộc của thuộc tính.</td></tr><tr><td>Type</td><td>string</td><td>Định dạng validate của thuộc tính.</td></tr><tr><td>MaxLength</td><td>integer</td><td>Số kí tự tối đa được truyền vào thuộc tính.</td></tr><tr><td>MinLength</td><td>integer</td><td>Số kí tự tối thiểu được truyền vào thuộc tính.</td></tr><tr><td>AcceptNull</td><td>boolean</td><td>Thông tin cho biết thuộc tính có thể nhận giá trị rỗng hay không.</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#43e884e9-36a4-4272-94bd-c388551e7c60)**.**
