@@ -1,5 +1,5 @@
 ---
-description: Đây là hàm dùng để đăng ký template ZNS
+description: Đây là hàm dùng để đăng ký template SMS chăm sóc khách hàng.
 ---
 
 # Hàm đăng ký template SMS
