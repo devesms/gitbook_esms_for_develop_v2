@@ -17,7 +17,7 @@ description: 'Lưu ý: Tối đa mỗi request giới hạn 50 đánh giá.'
 curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/' \
 --header 'Content-Type: application/json' \
 --data '{
-    "": "APIKEYCUABAN",
+    "ApiKey": "APIKEYCUABAN",
     "SecretKey": "SECRETKEYCUABAN",
     "OAID": "4097311281936189049",
     "TemplateID": "266986",
