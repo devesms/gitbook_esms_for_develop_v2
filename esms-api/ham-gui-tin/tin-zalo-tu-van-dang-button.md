@@ -82,11 +82,11 @@ curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendZa
 
 **Cấu trúc thuộc tính message**
 
-<table><thead><tr><th width="131.66668701171875">Tham số</th><th width="112.800048828125">Kiểu dữ liệu </th><th width="136.8665771484375" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>text</td><td></td><td>true</td><td>Tiêu đề của button<br>Giới hạn tối đa là 2.000 ký tự</td></tr><tr><td>attachment</td><td></td><td>true</td><td>Attachment cần gửi.</td></tr></tbody></table>
+<table><thead><tr><th width="131.66668701171875">Tham số</th><th width="112.800048828125">Kiểu dữ liệu </th><th width="136.8665771484375" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>text</td><td>string</td><td>true</td><td>Tiêu đề của button<br>Giới hạn tối đa là 2.000 ký tự</td></tr><tr><td>attachment</td><td>Object</td><td>true</td><td>Attachment cần gửi.</td></tr></tbody></table>
 
 **Cấu trúc thuộc tính message.attachment**
 
-<table><thead><tr><th width="133.800048828125">Tham số</th><th width="111.800048828125">Kiểu dữ liệu </th><th width="137.933349609375" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>type</td><td></td><td>true</td><td><p>Loại attachment. <br><br>Giá trị nhận vào bắt buộc:</p><ul><li><code>type</code> = template</li></ul></td></tr><tr><td>payload</td><td></td><td>true</td><td>Dữ liệu của action. </td></tr></tbody></table>
+<table><thead><tr><th width="133.800048828125">Tham số</th><th width="111.800048828125">Kiểu dữ liệu </th><th width="137.933349609375" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>type</td><td>string</td><td>true</td><td><p>Loại attachment. <br><br>Giá trị nhận vào bắt buộc:</p><ul><li><code>type</code> = template</li></ul></td></tr><tr><td>payload</td><td>Object</td><td>true</td><td>Dữ liệu của action. </td></tr></tbody></table>
 
 **Cấu trúc thuộc tính message.attachment.payload**
 
