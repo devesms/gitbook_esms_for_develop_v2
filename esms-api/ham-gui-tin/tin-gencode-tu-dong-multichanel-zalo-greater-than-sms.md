@@ -1,4 +1,4 @@
-# Tạo và gửi mã xác thực tự động đa kênh: ZNS => SMS
+# Tạo và gửi mã xác thực tự động đa kênh: Zalo => SMS
 
 Không giống như API tạo và gửi mã xác thực tự động qua tin nhắn SMS, API tạo và gửi mã tự động đa kênh mang lại nhiều lợi ích hơn, giúp người dùng tối ưu chi phí bằng cách lựa chọn kênh gửi phù hợp, đồng thời cải thiện trải nghiệm nhận mã với nội dung sinh động, trực quan hơn trên ứng dụng Zalo.
 
@@ -27,12 +27,12 @@ CHECKCODE: Kiểm tra xem mã đã tạo có hợp lệ hay không, giúp xác m
 curl --location 'https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V5' \
 --header 'Content-Type: application/json' \
 --data '{
- "ApiKey": "{{ApiKey}}",
- "Phone": "0901888484",
- "TimeAlive": "2",
- "SecretKey": "{{SecretKey}}",
- "MultiChannelTempId": "22575",
- "TypeId":"2"
+     "ApiKey": "{{ApiKey}}",
+     "Phone": "0901888484",
+     "TimeAlive": "2",
+     "SecretKey": "{{SecretKey}}",
+     "MultiChannelTempId": "22575",
+     "TypeId":"2"
 }'
 ```
 {% endcode %}
