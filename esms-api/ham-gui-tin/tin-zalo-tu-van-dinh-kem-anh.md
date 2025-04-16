@@ -44,9 +44,29 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloFollowerMessa
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="135">Tham số</th><th width="109">Kiểu dữ liệu </th><th width="136" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey eSMS cung cấp.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey eSMS cung cấp.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>User_id</td><td>string</td><td>true</td><td>Userid cần gửi đến, đây là userid của zalo.</td></tr><tr><td>text</td><td>string</td><td>false</td><td>Tiêu đề của ảnh<br> Giới hạn tối đa là 2.000 ký tự</td></tr><tr><td>url</td><td>string</td><td>true</td><td>Link hình ảnh, chấp nhận link đuôi PNG và JPG<br>Dung lượng tối đa: 1MB<br><br></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>eSMS sẽ trả về kết quả của tin nhắn này.<br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#cd0e23a3-5aa5-4198-a8bb-be0d8e450df9">ở đây</a>.<br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi của tin.<br>Không truyền khi tin muốn tin nhắn gửi đi liền.<br>Định dạng: yyyy-mm-dd hh:MM:ss</td></tr></tbody></table>
+<table><thead><tr><th width="135">Tham số</th><th width="109">Kiểu dữ liệu </th><th width="136" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey eSMS cung cấp.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>SecretKey eSMS cung cấp.</td></tr><tr><td>OAID</td><td>string</td><td>true</td><td>Zalo OA ID, là ID của trang Zalo Offical Account của doanh nghiệp. Doanh nghiệp cần đăng nhập vào trang quản trị của Zalo OA để lấy phần Zalo OA ID này. <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>eSMS sẽ trả về kết quả của tin nhắn này.<br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#cd0e23a3-5aa5-4198-a8bb-be0d8e450df9">ở đây</a>.<br>Xem chi tiết <a href="../callback-url.md">ở đây</a>.</td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi của tin.<br>Không truyền khi tin muốn tin nhắn gửi đi liền.<br>Định dạng: yyyy-mm-dd hh:MM:ss</td></tr><tr><td>Payload</td><td>Object</td><td>true</td><td>Chứa nội dung cần gửi</td></tr></tbody></table>
 
 ***
+
+**Cấu trúc thuộc tính recipient**
+
+<table><thead><tr><th width="136.99993896484375">Tham số</th><th width="113.888916015625">Kiểu dữ liệu </th><th width="139.5555419921875" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>user_id</td><td>string</td><td>true</td><td>ID của người nhận.</td></tr></tbody></table>
+
+**Cấu trúc thuộc tính message**
+
+<table><thead><tr><th width="143.22216796875">Tham số</th><th width="119.7777099609375">Kiểu dữ liệu </th><th width="125.5555419921875" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>text</td><td>string</td><td>true</td><td>Tiêu đề của ảnh<br>Giới hạn tối đa là 2.000 ký tự</td></tr><tr><td>attachment</td><td>Object</td><td>true</td><td>Attachment cần gửi.</td></tr></tbody></table>
+
+**Cấu trúc thuộc tính message.attachment**
+
+<table><thead><tr><th width="142.33331298828125">Tham số</th><th width="127.7777099609375">Kiểu dữ liệu </th><th width="126.8887939453125" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>type</td><td>string</td><td>true</td><td><p>Loại attachment.<br>Giá trị nhận vào bắt buộc:</p><ul><li><code>type</code> = template</li></ul></td></tr><tr><td>payload</td><td>Object</td><td>true</td><td>Chứa payload của attachment muốn gửi.</td></tr></tbody></table>
+
+**Cấu trúc thuộc tính message.attachment.payload**
+
+<table><thead><tr><th width="147">Tham số</th><th width="127.111083984375">Kiểu dữ liệu </th><th width="125.77783203125" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>template_type</td><td>string</td><td>true</td><td><p>Loại template<br>Với template gửi thông báo theo mẫu đính kèm ảnh, giá trị nhận vào là:</p><ul><li><code>template_type</code> = media</li></ul></td></tr><tr><td>elements</td><td>array</td><td>true</td><td>Các đối tượng của template.<br><strong>Lưu ý:</strong> Cấu trúc element thay đổi tùy theo loại template. <br>Với template media, danh sách element bao gồm tối đa 1 phần tử.</td></tr></tbody></table>
+
+#### Cấu trúc thuộc tính message.attachment.payload.element <a href="#cau-truc-thuoc-tinh-messageattachmentpayloadelement" id="cau-truc-thuoc-tinh-messageattachmentpayloadelement"></a>
+
+<table><thead><tr><th width="143.22216796875">Tham số</th><th width="127.7777099609375">Kiểu dữ liệu </th><th width="134" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>media_type</td><td>string</td><td>true</td><td><p>Loại media.</p><p></p><p>Các giá trị nhận vào:</p><ul><li>image: ảnh tĩnh</li><li>gif: ảnh động</li></ul></td></tr><tr><td>url</td><td>string</td><td>true</td><td><p>Đường dẫn đến ảnh<br>Các định dạng ảnh hỗ trợ: jpg và png<br>Dung lượng tối đa: 1MB<br><br><strong>Lưu ý:</strong></p><ul><li>kích thước ảnh tối ưu 16:9 và vùng safe zone 14:9</li></ul></td></tr></tbody></table>
 
 * **Response:**
 
