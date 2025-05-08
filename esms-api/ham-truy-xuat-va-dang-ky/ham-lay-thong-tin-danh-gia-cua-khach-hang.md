@@ -13,6 +13,7 @@ description: 'Lưu ý: Tối đa mỗi request giới hạn 50 đánh giá.'
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
+{% code overflow="wrap" %}
 ```json
 curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/' \
 --header 'Content-Type: application/json' \
@@ -23,10 +24,11 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/' \
     "TemplateID": "266986",
     "FromTime": "2024-07-28 00:00:00",
     "ToTime": "2024-07-30 23:59:59",
-    "Offset": "1",
+    "Offset": "0",
     "Limit": "50"
 }'
 ```
+{% endcode %}
 
 * **Cấu trúc body của request:**
 
