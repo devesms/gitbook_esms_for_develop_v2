@@ -9,22 +9,25 @@
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
+{% code overflow="wrap" %}
 ```json
 curl --location 'https://rest.esms.vn/MainService.svc/json/SummaryZaloMessage_V4_post_json/' \
 --header 'Content-Type: application/json' \
 --data '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
-    "Phone": "{{Phone}}",
+    "Phone": "0901888484",
     "Params": [
-        "{{value1}}",
-        "{{value2}}",
-        "{{value3}}"
+        "Anh",
+        "2506007899",
+        "02/05/2024",
+        "360.000"
     ],
-    "TempID": "{{TempID}}",
-    "OAID": "{{OAID}}"
+    "TempID": "200975",
+    "OAID": "4097311281936189049"
 }'
 ```
+{% endcode %}
 
 * **Cấu trúc body request:**
 
