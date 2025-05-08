@@ -8,16 +8,18 @@
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
+{% code overflow="wrap" %}
 ```json
 curl --location 'https://rest.esms.vn/MainService.svc/json/GetTemplate/' \
 --header 'Content-Type: application/json' \
 --data '{
-  "ApiKey": "{{ApiKey}}",
-  "SecretKey": "{{SecretKey}}",
-  "OAId": "{{OAId}}",
-  "SmsType": "{{SmsType}}"
+    "ApiKey": "{{ApiKey}}",
+    "SecretKey": "{{SecretKey}}",
+    "OAId": "4097311281936189049",
+    "SmsType": "24"
 }'
 ```
+{% endcode %}
 
 * **Cấu trúc body của request:**
 
