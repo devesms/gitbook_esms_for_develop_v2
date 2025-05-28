@@ -126,11 +126,7 @@ curl --location --request POST 'https://rest.esms.vn/MainService.svc/json/SendMu
 
 * **Cấu trúc body của response:**
 
-| Thuộc tính   | Kiểu dữ liệu | Mô tả                              |
-| ------------ | ------------ | ---------------------------------- |
-| CodeResult   | string       | Mã trả về.                         |
-| SMSID        | string       | ID tin nhắn do esms trả về.        |
-| ErrorMessage | string       | Thông tin lỗi trả về (nếu có lỗi). |
+<table><thead><tr><th width="150.86663818359375">Thuộc tính</th><th width="125.199951171875">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>SMSID</td><td>string</td><td>ID tin nhắn do esms trả về.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông tin lỗi trả về (nếu có lỗi).</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#850974b9-12cf-46f5-946c-e8e15aa3585b)**.**
