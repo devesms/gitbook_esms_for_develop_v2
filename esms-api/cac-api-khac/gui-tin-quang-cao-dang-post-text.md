@@ -16,6 +16,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandn
 <SECRETKEY>{{SECRETKEY}}</SECRETKEY>
 <CONTENT>{{CONTENT}}</CONTENT>
 <SMSTYPE>1</SMSTYPE>
+<CAMPAIGNID>khuyến mãi</CAMPAIGNID>
 <BRANDNAME>{{BRANDNAME}}</BRANDNAME>
 <CONTACTS>
 <CUSTOMER><PHONE>{{PHONE}}</PHONE></CUSTOMER>
@@ -29,7 +30,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleSMSBrandn
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="157">Tham số</th><th width="130">Kiểu dữ liệu</th><th width="140" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>Phone</td><td>string</td><td>true</td><td>Số điện thoại nhận tin.</td></tr><tr><td>Content</td><td>string</td><td>true</td><td>Nội dung tin nhắn.</td></tr><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr><tr><td>SmsType</td><td>string</td><td>true</td><td>Loại tin nhắn<br>2: Tin CSKH.</td></tr><tr><td>Brandname</td><td>string</td><td>true</td><td>Tên Brandname (tên công ty hay tổ chức khi gửi tin sẽ hiển thị trên tin nhắn đó). <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr></tbody></table>
+<table><thead><tr><th width="157">Tham số</th><th width="130">Kiểu dữ liệu</th><th width="140" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>CONTACTS</td><td>string</td><td>true</td><td>Số điện thoại nhận tin.</td></tr><tr><td>CONTENT</td><td>string</td><td>true</td><td>Nội dung tin nhắn.</td></tr><tr><td>APIKEY</td><td>string</td><td>true</td><td>ApiKey của tài khoản.</td></tr><tr><td>SECRETKEY</td><td>string</td><td>true</td><td>Secretkey của tài khoản.</td></tr><tr><td>SMSTYPE</td><td>string</td><td>true</td><td>Loại tin nhắn<br>2: Tin CSKH.</td></tr><tr><td>BRANDNAME</td><td>string</td><td>true</td><td>Tên Brandname (tên công ty hay tổ chức khi gửi tin sẽ hiển thị trên tin nhắn đó). <br><strong>Chú ý: sẽ phải đăng ký trước khi sử dụng.</strong></td></tr><tr><td>CAMPAIGNID</td><td>string</td><td>false</td><td>Tên chiến dịch gửi tin, tối đa 254 ký tự</td></tr></tbody></table>
 
 
 
