@@ -7,6 +7,10 @@ description: >-
 
 # Tin Zalo mỗi khách hàng một nội dung
 
+{% hint style="warning" %}
+API này không hỗ trợ gửi tin từ ví zns miễn phí, các tin nhắn được miễn phí sẽ hậu kiểm và đối trừ sau.
+{% endhint %}
+
 ## HTTP request
 
 \
@@ -117,6 +121,5 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_zns_bulk_v4_post
 
 <table><thead><tr><th width="177">Thuốc tính</th><th width="146">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Request được gửi đến ESMS thành công.<br><br><strong>Lưu ý:</strong> Mã phản hồi <strong>100</strong> chỉ xác nhận rằng yêu cầu đã được gửi thành công đến hệ thống ESMS, <strong>không phản ánh việc tin nhắn đã được gửi đến số điện thoại người nhận hay chưa</strong>.<br>Để theo dõi trạng thái cuối cùng của tin nhắn, quý khách vui lòng truyền thêm tham số <strong>CallbackUrl</strong>; hệ thống ESMS sẽ tự động gửi phản hồi (callback) đến địa chỉ này khi có trạng thái cuối của tin.</td></tr><tr><td>Message</td><td>string</td><td>Mô tả chi tiết về phản hồi.</td></tr><tr><td>TotalFail</td><td>string</td><td>Tổng số điện thoại request gửi tin thất bại.</td></tr><tr><td>TotalSuccess</td><td>string</td><td>Tổng số điện thoại request gửi tin thành công.</td></tr><tr><td>detail : CodeResult</td><td>string</td><td>Mã trả về.</td></tr><tr><td>detail : Phone</td><td>string</td><td>Số điện thoại tương ứng với ID tin nhắn do esms trả về.</td></tr><tr><td>detail : SMSID</td><td>string</td><td>ID tin nhắn do esms trả về.</td></tr></tbody></table>
 
-* _<mark style="color:yellow;">**Lưu ý:**</mark>_ API này không cho gửi trừ ví zns free dù tk có bật hay không, tin zns free cuối tháng sẽ đối soát lại.
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#1f75d02b-c622-4de4-aedc-dd9d4c2b16ea)**.**&#x20;
