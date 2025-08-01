@@ -31,14 +31,15 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT
     "Phones": [
         "0901888484"
     ],
-    "SmsType": "23"
+    "SmsType": "23",
+    "RequestId": "96accf59-0c41-4bc7-a5c4-4a466c2e41c2"
 }'
 // Truyền \r\n để gửi nội dung xuống dòng
 // Gửi tin đến nhiều số điện thoại khác nhau sẽ truyền theo cú pháp: "0901888484","0918238965"
 ```
 {% endcode %}
 
-<mark style="color:orange;">**`Lưu ý:`**</mark> Tin nhắn Viber có bốn kiểu nội dung để lựa chọn như sau:\
+<mark style="color:orange;">**`Lưu ý:`**</mark> Tin nhắn Viber có 4 kiểu nội dung để lựa chọn như sau:\
 \- <mark style="color:green;">**Kiểu Văn bản - Ảnh- Nút**</mark> => Khi request truyền các tham số: Content, OttImgUrl, OttUrl, OTTLabel.\
 \- <mark style="color:green;">**Kiểu Văn bản - Nút**</mark> => Khi request truyền các tham số: Content, OttUrl, OTTLabel.\
 \- <mark style="color:green;">**Kiểu Ảnh**</mark> => Khi request truyền các tham số: OttImgUrl.\
@@ -46,7 +47,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/Send_Multiple_Sms_OTT
 
 * **Cấu trúc body của request:**
 
-<table><thead><tr><th width="136.77777099609375">Tham số</th><th width="109.7777099609375">Kiểu dữ liệu</th><th width="118.1112060546875" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>Secretkey của tài khoản</td></tr><tr><td>Brandname</td><td>string</td><td>true</td><td>Tên Brandname (tên công ty hay tổ chức khi gửi tin sẽ hiển thị trên tin nhắn đó). Chú ý: sẽ phải đăng ký trước khi sử dụng.</td></tr><tr><td>SmsType</td><td>number</td><td>true</td><td>Loại tin nhắn<br>23: Tin nhắn OTT Viber.</td></tr><tr><td>Content</td><td>string</td><td>true</td><td>Nội dung gửi đến người nhận</td></tr><tr><td>OttImgUrl</td><td>string</td><td>false</td><td>Đường dẫn hình ảnh.</td></tr><tr><td>OTTLabel</td><td>string</td><td>false</td><td>Tên nút.</td></tr><tr><td>OttUrl</td><td>string</td><td>false</td><td>Đường dẫn tên nút.</td></tr><tr><td>Phones</td><td>array</td><td>true</td><td><p>Số điện thoại người nhận. </p><p></p><p>Truyền nhiều số điện thoại theo cú pháp</p><p>[ "0901888484","0918238965","..." ]</p></td></tr><tr><td>IsSandBox</td><td>number</td><td>false</td><td>1: Tin gửi ở môi trường test, dùng để kiểm tra kết nối và các thông số tích hợp, không về tin nhắn, không trừ tiền.<br>0: Tin gửi ở môi trường bình thường, có về tin nhắn.</td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL nhận kết quả gửi tin. <br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#6acfe1fc-8601-4bce-9549-65bf17f279b1">ở đây</a>. <br>Xem chi tiết <a href="https://developers-v2.esms.vn/esms-api/callback-url">ở đây</a>.</td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi của tin.<br>Không truyền khi tin muốn tin nhắn gửi đi liền.<br>Định dạng: yyyy-mm-dd hh:MM:ss</td></tr></tbody></table>
+<table><thead><tr><th width="136.77777099609375">Tham số</th><th width="109.7777099609375">Kiểu dữ liệu</th><th width="118.1112060546875" data-type="checkbox">Tính bắt buộc</th><th>Mô tả</th></tr></thead><tbody><tr><td>ApiKey</td><td>string</td><td>true</td><td>ApiKey của tài khoản</td></tr><tr><td>SecretKey</td><td>string</td><td>true</td><td>Secretkey của tài khoản</td></tr><tr><td>Brandname</td><td>string</td><td>true</td><td>Tên Brandname (tên công ty hay tổ chức khi gửi tin sẽ hiển thị trên tin nhắn đó). Chú ý: sẽ phải đăng ký trước khi sử dụng.</td></tr><tr><td>SmsType</td><td>number</td><td>true</td><td>Loại tin nhắn<br>23: Tin nhắn OTT Viber.</td></tr><tr><td>Content</td><td>string</td><td>true</td><td>Nội dung gửi đến người nhận</td></tr><tr><td>OttImgUrl</td><td>string</td><td>false</td><td>Đường dẫn hình ảnh.</td></tr><tr><td>OTTLabel</td><td>string</td><td>false</td><td>Tên nút.</td></tr><tr><td>OttUrl</td><td>string</td><td>false</td><td>Đường dẫn tên nút.</td></tr><tr><td>Phones</td><td>array</td><td>true</td><td><p>Số điện thoại người nhận. </p><p></p><p>Truyền nhiều số điện thoại theo cú pháp</p><p>[ "0901888484","0918238965","..." ]</p></td></tr><tr><td>IsSandBox</td><td>number</td><td>false</td><td>1: Tin gửi ở môi trường test, dùng để kiểm tra kết nối và các thông số tích hợp, không về tin nhắn, không trừ tiền.<br>0: Tin gửi ở môi trường bình thường, có về tin nhắn.</td></tr><tr><td>CallbackUrl</td><td>string</td><td>false</td><td>URL nhận kết quả gửi tin. <br>Xem body mẫu <a href="https://samplefordevelopers.esms.vn/#6acfe1fc-8601-4bce-9549-65bf17f279b1">ở đây</a>. <br>Xem chi tiết <a href="https://developers-v2.esms.vn/esms-api/callback-url">ở đây</a>.</td></tr><tr><td>RequestId</td><td>string</td><td>false</td><td>ID đối tác truyền sang để chặn trùng và đối soát khi cần.<br>Độ dài tối đa 50 ký tự.<br><strong>Mỗi RequestId truyền sang có hiệu lực chặn trong 24h.</strong></td></tr><tr><td>SendDate</td><td>string</td><td>false</td><td>Thời gian hẹn gửi của tin.<br>Không truyền khi tin muốn tin nhắn gửi đi liền.<br>Định dạng: yyyy-mm-dd hh:MM:ss</td></tr></tbody></table>
 
 
 
