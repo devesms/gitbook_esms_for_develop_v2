@@ -9,8 +9,6 @@ Các trường hợp thường gặp nhất khi gửi Zalo thất bại: số đ
 CHECKCODE: Kiểm tra xem mã đã tạo có hợp lệ hay không, giúp xác minh tính đúng đắn và đảm bảo an toàn khi sử dụng.
 
 {% hint style="warning" %}
-**Lưu ý:**
-
 * Quý khách cần đăng ký Zalo OA, template Zalo, brandname CSKH và template brandname CSKH trước khi sử dụng.
 * Khi có nhu cầu sử dụng API này, quý khách vui lòng gửi các thông tin sau đây cho bộ phận kinh doanh để cấu hình gửi: OAID, templateID zalo, brandname CSKH, template brandname CSKH.
 {% endhint %}

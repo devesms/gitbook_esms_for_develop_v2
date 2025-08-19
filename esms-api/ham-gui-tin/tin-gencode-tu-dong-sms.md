@@ -7,7 +7,7 @@ GENCODE: Tạo mã xác thực/mã OTP tự động, sau đó gửi tin nhắn �
 CHECKCODE: Kiểm tra xem mã đã tạo có hợp lệ hay không, giúp xác minh tính đúng đắn và đảm bảo an toàn khi sử dụng.
 
 {% hint style="warning" %}
-**Lưu ý:** khách hàng cần đăng ký brandname và template trước khi sử dụng API này.
+Khách hàng cần đăng ký brandname và template trước khi sử dụng API này.
 {% endhint %}
 
 * [x] **GENCODE: tạo và gửi mã xác thực tự động**
