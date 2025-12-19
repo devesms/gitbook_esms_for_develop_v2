@@ -19,7 +19,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V
     "OAID": "{{OAID}}",
     "Phone": "{{Phone}}",
     "Content": "{{Content}}",
-    "RequestId": "{{RequestId"}},
+    "RequestId": "{{RequestId}}",
     "IsUnicode": "1"
 }'
 ```
