@@ -10,6 +10,7 @@ description: Đây là hàm dùng để truy xuất thông tin trạng thái ZNS
 <mark style="color:yellow;">**`POST`**</mark> [http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus](http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus)<br>
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
+* **Response Type:** application/json
 
 
 
@@ -59,6 +60,10 @@ curl --location 'http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus' 
 **Cấu trúc thuộc tính từng object trong Data**
 
 <table><thead><tr><th width="174">Thuộc tính</th><th width="171">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>delivery_time</td><td>string</td><td>Thời gian thiết bị của người dùng nhận được thông báo ZNS.</td></tr><tr><td>message</td><td>string</td><td><p>Mô tả trạng thái thông báo. Các giá trị trả về:<br>-1: The message does not exist<br>0: The message is pushed successfully to Zalo server but has not yet delivered to user’s phone<br>1: The message was delivered to the user's phone</p><p></p></td></tr><tr><td>status</td><td>int</td><td>Trạng thái ZNS.</td></tr></tbody></table>
+
+{% hint style="info" %}
+Lưu ý: Giới hạn request 30TPS.
+{% endhint %}
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
 * _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#12f5e80f-025c-4c9c-9c9c-b42622ea8af2)**.**
