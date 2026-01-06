@@ -59,7 +59,7 @@ curl --location 'http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus' 
 
 **Cấu trúc thuộc tính từng object trong Data**
 
-<table><thead><tr><th width="174">Thuộc tính</th><th width="171">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>delivery_time</td><td>string</td><td>Thời gian thiết bị của người dùng nhận được thông báo ZNS.</td></tr><tr><td>message</td><td>string</td><td><p>Mô tả trạng thái thông báo. Các giá trị trả về:<br>-1: The message does not exist<br>0: The message is pushed successfully to Zalo server but has not yet delivered to user’s phone<br>1: The message was delivered to the user's phone</p><p></p></td></tr><tr><td>status</td><td>int</td><td>Trạng thái ZNS.</td></tr></tbody></table>
+<table><thead><tr><th width="174">Thuộc tính</th><th width="171">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>delivery_time</td><td>string</td><td>Thời gian thiết bị của người dùng nhận được thông báo ZNS.</td></tr><tr><td>message</td><td>string</td><td>Mô tả trạng thái thông báo. Các giá trị trả về:<br>-1: Tin nhắn không tồn tại<br>0: Tin nhắn đã được gửi lên máy chủ Zalo nhưng chưa được chuyển đến điện thoại của người dùng<br>1: Tin nhắn đã được chuyển đến điện thoại của người dùng</td></tr><tr><td>status</td><td>int</td><td>Trạng thái ZNS.</td></tr></tbody></table>
 
 {% hint style="info" %}
 Lưu ý: Giới hạn request 30TPS.
