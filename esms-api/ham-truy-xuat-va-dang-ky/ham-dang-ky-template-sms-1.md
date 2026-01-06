@@ -10,7 +10,7 @@ description: Đây là hàm dùng để truy xuất thông tin trạng thái ZNS
 <mark style="color:yellow;">**`POST`**</mark> [http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus](http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus)<br>
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
-* **Response Type:** application/json
+* **Response Type:** <mark style="color:orange;">application/json</mark>
 
 
 
