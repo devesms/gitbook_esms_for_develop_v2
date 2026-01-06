@@ -7,8 +7,7 @@ hidden: true
 ## HTTP request&#x20;
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/](https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/)\
-
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/](https://rest.esms.vn/MainService.svc/json/ZNS/GetFollowers/)<br>
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>

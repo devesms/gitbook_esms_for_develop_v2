@@ -7,8 +7,7 @@ description: Đây là hàm dùng để đăng ký template SMS chăm sóc khác
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/](https://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/)\
-
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/](https://rest.esms.vn/MainService.svc/json/SubServicePreviewJson/)<br>
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
