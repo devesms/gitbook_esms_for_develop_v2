@@ -12,8 +12,7 @@ Khách hàng cần đăng ký brandname và template trước khi sử dụng AP
 
 * [x] **GENCODE: tạo và gửi mã xác thực tự động**
 
-<mark style="color:green;">**`GET`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode\_V4\_get?Phone=\{{Phone\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&TimeAlive=\{{TimeAlive\}}\&NumCharOfCode=\{{NumCharOfCode\}}\&Brandname=\{{Brandname\}}\&Type=2\&message=\{{Content\}}](https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V4_get?Phone=\{{Phone\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&TimeAlive=\{{TimeAlive\}}\&NumCharOfCode=\{{NumCharOfCode\}}\&Brandname=\{{Brandname\}}\&Type=2\&message=\{{Content\}})\
-
+<mark style="color:green;">**`GET`**</mark> [https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode\_V4\_get?Phone=\{{Phone\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&TimeAlive=\{{TimeAlive\}}\&NumCharOfCode=\{{NumCharOfCode\}}\&Brandname=\{{Brandname\}}\&Type=2\&message=\{{Content\}}](https://rest.esms.vn/MainService.svc/json/SendMessageAutoGenCode_V4_get?Phone=\{{Phone\}}\&ApiKey=\{{ApiKey\}}\&SecretKey=\{{SecretKey\}}\&TimeAlive=\{{TimeAlive\}}\&NumCharOfCode=\{{NumCharOfCode\}}\&Brandname=\{{Brandname\}}\&Type=2\&message=\{{Content\}})<br>
 
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 

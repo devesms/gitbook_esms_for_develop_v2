@@ -66,4 +66,4 @@ Lưu ý: Giới hạn request 30TPS.
 {% endhint %}
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
-* _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#12f5e80f-025c-4c9c-9c9c-b42622ea8af2)**.**
+* _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](ham-lay-thong-tin-trang-thai-zns.md)**.**

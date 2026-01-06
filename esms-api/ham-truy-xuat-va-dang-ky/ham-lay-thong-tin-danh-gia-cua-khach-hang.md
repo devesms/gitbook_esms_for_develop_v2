@@ -7,8 +7,7 @@ description: 'Lưu ý: Tối đa mỗi request giới hạn 50 đánh giá.'
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/](https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/)\
-
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/](https://rest.esms.vn/MainService.svc/json/ZNS/GetRating/)<br>
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>

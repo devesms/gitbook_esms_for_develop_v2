@@ -4,8 +4,7 @@ Hàm cho phép bạn gửi tin nhắn đến 1 hoặc nhiều số điện tho�
 \- Đăng ký và xác thực Zalo Offical Account (Zalo OA)\
 \- Đăng ký template tin nhắn\
 Để hoàn thành các việc trên vui lòng liên hệ nhân viên kinh doanh hỗ trợ của bạn hoặc Hotline 0901888484\
-Ví dụ 1 mẫu tin ZNS\
-
+Ví dụ 1 mẫu tin ZNS<br>
 
 <figure><img src="../../.gitbook/assets/Untitled.png" alt=""><figcaption><p>Một tin ZNS mẫu</p></figcaption></figure>
 

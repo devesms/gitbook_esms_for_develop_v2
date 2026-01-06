@@ -7,8 +7,7 @@ description: Đây là hàm dùng để đăng ký template ZNS
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/RegisZNSTemplateJson/](https://rest.esms.vn/MainService.svc/json/RegisZNSTemplateJson/)\
-
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/RegisZNSTemplateJson/](https://rest.esms.vn/MainService.svc/json/RegisZNSTemplateJson/)<br>
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
