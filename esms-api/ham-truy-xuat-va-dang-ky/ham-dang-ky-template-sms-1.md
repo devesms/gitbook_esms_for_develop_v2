@@ -54,7 +54,7 @@ curl --location 'http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus' 
 
 * **Cấu trúc body của response:**
 
-<table><thead><tr><th width="204" align="center">Thuộc tính</th><th width="166" align="center">Kiểu dữ liệu</th><th align="center">Mô tả</th></tr></thead><tbody><tr><td align="center">CodeResult</td><td align="center">string</td><td align="center">Kết quả của Request.</td></tr><tr><td align="center">ErrorMessage</td><td align="center">string</td><td align="center">Thông báo kết quả trả về.</td></tr><tr><td align="center">Data</td><td align="center">string</td><td align="center">Thông tin trạng thái ZNS .</td></tr></tbody></table>
+<table><thead><tr><th width="204">Thuộc tính</th><th width="166">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>CodeResult</td><td>string</td><td>Kết quả của Request.</td></tr><tr><td>ErrorMessage</td><td>string</td><td>Thông báo kết quả trả về.</td></tr><tr><td>Data</td><td>string</td><td>Thông tin trạng thái ZNS .</td></tr></tbody></table>
 
 **Cấu trúc thuộc tính từng object trong Data**
 
