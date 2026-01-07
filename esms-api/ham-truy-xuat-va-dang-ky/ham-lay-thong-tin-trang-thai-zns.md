@@ -66,4 +66,4 @@ curl --location 'http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus' 
 <table><thead><tr><th width="174">Thuộc tính</th><th width="171">Kiểu dữ liệu</th><th>Mô tả</th></tr></thead><tbody><tr><td>delivery_time</td><td>string</td><td>Thời gian thiết bị của người dùng nhận được thông báo ZNS.</td></tr><tr><td>message</td><td>string</td><td>Mô tả trạng thái thông báo. Các giá trị trả về:<br>-1: Tin nhắn không tồn tại<br>0: Tin nhắn đã được gửi lên máy chủ Zalo nhưng chưa được chuyển đến điện thoại của người dùng<br>1: Tin nhắn đã được chuyển đến điện thoại của người dùng</td></tr><tr><td>status</td><td>int</td><td>Trạng thái của thông báo ZNS.</td></tr></tbody></table>
 
 * _<mark style="color:yellow;">**Thông tin chi tiết mã lỗi xem ở bảng:**</mark>_ [**Mã lỗi**](../bang-ma-loi.md) **.**
-* _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](ham-lay-thong-tin-trang-thai-zns.md)**.**
+* _<mark style="color:yellow;">**Lấy code mẫu các ngôn ngữ trên Postman:**</mark>_ [**Link code mẫu**](https://samplefordevelopers.esms.vn/#cab8ca81-d83a-46e5-ab19-b58f29a6f656)**.**
