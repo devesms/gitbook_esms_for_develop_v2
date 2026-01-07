@@ -5,7 +5,7 @@ description: Đây là hàm dùng để truy xuất trạng thái của thông b
 # Hàm lấy thông tin trạng thái ZNS
 
 {% hint style="info" %}
-Lưu ý: Giới hạn request 30TPS.
+**Lưu ý: Giới hạn request 30TPS.**
 {% endhint %}
 
 ## HTTP request
