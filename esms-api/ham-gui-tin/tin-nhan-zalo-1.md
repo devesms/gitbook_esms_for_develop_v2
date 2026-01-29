@@ -20,7 +20,7 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/za
     "ApiKey": "APIKEYCUABAN",
     "SecretKey": "SECRETKEYCUABAN",
     "OAID": "4097311281936189049",
-    "Phone": "0901888484",
+    "ZaloUid": "5308693166941955879",
     "TempData": {
         "customer_name": "Đinh Thái Hà",
         "order_code": "HD00001",
