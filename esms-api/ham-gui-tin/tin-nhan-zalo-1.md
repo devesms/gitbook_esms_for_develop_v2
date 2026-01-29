@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Tin nhắn Zalo gửi bằng UID
 
 ## HTTP request
