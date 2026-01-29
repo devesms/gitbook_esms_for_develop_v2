@@ -7,16 +7,16 @@ hidden: true
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V6/](http://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/)
+<mark style="color:yellow;">**`POST`**</mark>  https://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V6/zalo\_uid/
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
 
 {% code overflow="wrap" %}
 ```json
-curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/' \
+curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/zalo_uid/' \
 --header 'Content-Type: application/json' \
---data '{
+--data-raw '{
     "ApiKey": "APIKEYCUABAN",
     "SecretKey": "SECRETKEYCUABAN",
     "OAID": "4097311281936189049",
@@ -33,7 +33,6 @@ curl --location 'https://rest.esms.vn/MainService.svc/json/SendZaloMessage_V6/' 
         "delivery_date": "01/08/2024"
     },
     "TempID":  "200607",
-    "SendingMode":"1",
     "campaignid":  "Xác nhận mua hàng",
     "RequestId": "96accf59-0c41-4bc7-a5c4-4a466c2e41c2",
     "CallbackUrl": "https://esms.vn/webhook/"
