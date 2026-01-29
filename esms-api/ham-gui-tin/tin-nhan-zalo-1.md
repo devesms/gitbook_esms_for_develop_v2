@@ -7,7 +7,7 @@ hidden: true
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark>  https://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V6/zalo\_uid/
+<mark style="color:yellow;">**`POST`**</mark>   <mark style="color:$primary;">https://rest.esms.vn/MainService.svc/json/SendZaloMessage\_V6/zalo\_uid/</mark>
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
