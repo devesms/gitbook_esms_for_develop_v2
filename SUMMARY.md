@@ -47,7 +47,7 @@
   * [Hàm đăng ký template Zalo](esms-api/ham-truy-xuat-va-dang-ky/ham-dang-ky-template-zalo.md)
   * [Hàm đăng ký template SMS](esms-api/ham-truy-xuat-va-dang-ky/ham-dang-ky-template-sms.md)
   * [Hàm lấy thông tin trạng thái ZNS](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-thong-tin-trang-thai-zns.md)
-  * [Copy of Hàm lấy thông tin trạng thái ZNS](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-thong-tin-trang-thai-zns-1.md)
+  * [Hàm kiểm tra trạng thái tin nhắn Zalo](esms-api/ham-truy-xuat-va-dang-ky/ham-lay-thong-tin-trang-thai-zns-1.md)
 * [Các API khác](esms-api/cac-api-khac/README.md)
   * [Gửi tin chăm sóc khách hàng dạng GET](esms-api/cac-api-khac/gui-tin-cham-soc-khach-hang-dang-get.md)
   * [Gửi tin chăm sóc khách hàng dạng POST X-Form](esms-api/cac-api-khac/gui-tin-cham-soc-khach-hang-dang-post-x-form.md)

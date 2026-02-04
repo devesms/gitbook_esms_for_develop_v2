@@ -1,18 +1,20 @@
 ---
-description: Đây là hàm dùng để truy xuất trạng thái của thông báo ZNS.
+description: >-
+  API kiểm tra trạng thái tin nhắn Zalo, bao gồm thông tin kết quả và mã lỗi
+  được trả về.
 hidden: true
 ---
 
-# Copy of Hàm lấy thông tin trạng thái ZNS
+# Hàm kiểm tra trạng thái tin nhắn Zalo
 
 {% hint style="warning" %}
-**Lưu ý:** Giới hạn tốc độ gọi api này là 30 requests/giây.
+**Lưu ý:** Giới hạn tốc độ gọi api này là 100 requests/giây.
 {% endhint %}
 
 ## HTTP request
 
 \
-<mark style="color:yellow;">**`POST`**</mark> [http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus](http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus)<br>
+<mark style="color:yellow;">**`POST`**</mark> [https://rest.esms.vn/MainService.svc/json/QueryZnsStatus/](https://rest.esms.vn/MainService.svc/json/QueryZnsStatus/)<br>
 
 * **Content Type:** <mark style="color:orange;">application/json</mark>
 * **Response Type:** <mark style="color:orange;">application/json</mark>
@@ -20,13 +22,13 @@ hidden: true
 
 
 ```json
-curl --location 'http://rest.esms.vn/MainService.svc/json/GetZaloMessageStatus' \
+curl --location 'https://rest.esms.vn/MainService.svc/json/QueryZnsStatus/' \
 --header 'Content-Type: application/json' \
 --data '{
     "ApiKey": "{{ApiKey}}",
     "SecretKey": "{{SecretKey}}",
-    "OAID": "{{OAID}}",
-    "MessageId": "{{MessageId}}"
+    "SmsId": "2d00b834cc1d488081ba7ec308da0ec40918238965",
+    "SmsType": "25"
 }'
 ```
 
