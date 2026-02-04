@@ -1,7 +1,7 @@
 ---
 description: >-
-  API kiểm tra trạng thái tin nhắn Zalo, bao gồm thông tin kết quả và mã lỗi
-  được trả về.
+  API kiểm tra trạng thái tin nhắn Zalo, bao gồm thông tin kết quả gửi và mã lỗi
+  của tin nhắn.
 hidden: true
 ---
 
