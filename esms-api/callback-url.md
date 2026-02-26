@@ -1,6 +1,6 @@
 # Callback Url
 
-* Khi có trạng thái thực của tin nhắn. eSMS sẽ callback trạng thái về hook của khách hàng theo dạng HTTP GET.&#x20;
+* Khi có trạng thái thực của tin nhắn. eSMS sẽ callback trạng thái về hook của khách hàng theo dạng **HTTP&#x20;**<mark style="color:green;">**GET**</mark>.&#x20;
 * Callback sẽ được retry 5 lần nếu như url của khách hàng trả timeout. Hết 5 lần mà url của khách hàng vẫn timeout thì sẽ ngừng callback.<br>
 
 ## Callback mẫu
