@@ -69,6 +69,14 @@ curl --location -g 'https://{{yourportalreceivecallback}}?SMSID=7d11c87a22934df3
 ```
 {% endcode %}
 
+### **Callback mẫu cho loại tin Zalo gửi bằng UID**
+
+{% code overflow="wrap" %}
+```
+curl --location --globoff 'https://{{yourportalreceivecallback}}?SMSID=5450d5579bfa466a9f2a5911c82f4037&SendFailed=0&SendStatus=5&SendSuccess=1&TotalPrice=2104.0000&TotalReceiver=1&TotalSent=1&RequestId=&TypeId=25&telcoid=9&phonenumber=5308693166941955879&error_info={%22error%22%3A0%2C%22message%22%3A%22Success%22%2C%22data%22%3A{%22delivery_time%22%3Anull%2C%22message%22%3A%22The%20message%20was%20delivered%20to%20the%20user%27s%20phone%22%2C%22status%22%3A1}}&oaid=3639635426588416370&tempid=523194&partnerids=416f53d0cf0ec7569e19'
+```
+{% endcode %}
+
 ## Thông tin kết quả trả về của callback:
 
 <table><thead><tr><th width="138.5999755859375">Thuộc tính</th><th width="112.199951171875">Kiểu dữ liệu</th><th>Định nghĩa</th></tr></thead><tbody><tr><td>SMSID</td><td>string</td><td>Mã tin nhắn.</td></tr><tr><td>SendFailed</td><td>string</td><td>Số lượng tin nhắn thất bại.</td></tr><tr><td>SendStatus</td><td>string</td><td>Trạng thái tin nhắn<br>1: Chờ duyệt.<br>2: Chờ gửi.<br>4: Từ chối.<br>5: Đã gửi xong (<strong>Kiểm tra thêm SendSuccess/SendFailed để biết tin gửi thành công hay thất bại</strong>).<br>7: Đã gửi chờ báo cáo.</td></tr><tr><td>SendSuccess</td><td>string</td><td>Số lượng tin thành công.</td></tr><tr><td>Totalprice</td><td>string</td><td>Tổng tiền đơn.</td></tr><tr><td>TotalReceiver</td><td>string</td><td>Tổng số người nhận.</td></tr><tr><td>TotalSent</td><td>string</td><td>Tổng số lượng tin được gửi.</td></tr><tr><td>RequestId</td><td>string</td><td>Mã request của khách hàng.</td></tr><tr><td>TypeId</td><td>string</td><td>Loại tin nhắn<br>1: tin quảng cáo.<br>2: tin chăm sóc khách hàng.<br>23: tin viber.<br>24: tin zalo ưu tiên.<br>25: tin zalo bình thường.</td></tr><tr><td>telcoid</td><td>string</td><td>Nhà mạng<br>1: Viettel, 2: Mobi, 3: Vina, 4: Vietnammobile, 5: Gtel, 6: Itel, 7: Reddi.</td></tr><tr><td>phonenumber</td><td>string</td><td>Số điện thoại người nhận.</td></tr><tr><td>partnerids</td><td>string</td><td>Mã giao dịch của Zalo <strong>(chỉ có đối với tin zalo).</strong></td></tr><tr><td>error_info</td><td>string</td><td>Mã lỗi của tin nhắn <strong>(chỉ có đối với tin zalo).</strong></td></tr><tr><td>oaid</td><td>string</td><td>ID của Oa gửi tin <strong>(chỉ có đối với tin zalo).</strong></td></tr><tr><td>tempid</td><td>string</td><td>Tempid gửi tin <strong>(chỉ có đối với tin zalo).</strong></td></tr></tbody></table>
