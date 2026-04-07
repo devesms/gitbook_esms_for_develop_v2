@@ -18,7 +18,7 @@ description: >-
 curl --location 'https://rest.esms.vn/MainService.svc/json/SendMultipleMessage_V4/' \
 --header 'Content-Type: text/plain' \
 --data '<RQST>
-<APIKEY><{{ApiKey}}</APIKEY>
+<APIKEY>{{ApiKey}}</APIKEY>
 <SECRETKEY>{{SecretKey}}</SECRETKEY>
 <CONTENT>{{Content}}</CONTENT>
 <SMSTYPE>2</SMSTYPE>
